@@ -6,4 +6,5 @@ We'll follow the syllabus of MSE's online lessons found here: <a href="https://w
 ---
 <br/>
 
-[Lesson 0 - Prerequisites](/L00-Prerequisites/)
+[Lesson 0 - Prerequisites](/L00-Prerequisites/)<br/>
+[Lesson 1-9 - Creating SPA Project](/L01-L09-Creating-SPA-Project/)
