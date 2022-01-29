@@ -40,7 +40,7 @@ Navigate: Documents, Introduction, Quickstart<br/>
 
 A pre-flight check will be that you can create a simple one-field Hello, World application for first RIA and then Web Client as in the Quickstart video on MSE's site (Hello World Program Video). This proves the basic plumbing is working.
 
-I also, well, because I love html-merge web apps, always want a similar proof-of-life of life test via the requester mgrqispi.dll for a Hello, World merge program. On Windows 10, I needed the following changes to IIS to allow this.
+I also, well, because I love html-merge web apps, always want a similar proof-of-life test via the requester mgrqispi.dll for a Hello, World merge program. On Windows 10, I needed the following changes to IIS to allow this.
 
 - Change line in C:\Windows\System32\inetsrv\config\applicationHost.config for "modules" to read overrideModeDefault="Allow"
 
