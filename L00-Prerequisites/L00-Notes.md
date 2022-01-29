@@ -52,7 +52,7 @@ I also, well, because I love html-merge web apps, always want a similar proof-of
                 <section name="modules" allowDefinition="MachineToApplication" overrideModeDefault="Allow" />
     ```
 
-- Add Handler Mappings for scripts directories, uniScripts and MagicScripts as appropriate based version of Magic:
+- Add Handler Mappings for MagicScripts to support requester:
 
     ```
     Add Script Map
