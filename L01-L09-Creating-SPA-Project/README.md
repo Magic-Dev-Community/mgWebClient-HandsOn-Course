@@ -21,8 +21,7 @@ package.json is not in the src folder (page incorrectly lists src\package.json)
 
 Lesson 8:
 
-Replace the Login code section has inconsistent naming for the login.component.html content - magic field names should be prefixed with V_
-such as V_vUser - while that looks poor, it's V_ in the typescript together with the usual vName format for vituals in Magic.
+The "Replace the Login" code section has inconsistent naming for the login.component.html content - magic field names should be prefixed with V_ such as V_vUser - while that looks a little strtange, it's V_ in the typescript together with the usual vName format for virtuals in Magic.
 
 
 Lesson 9:
