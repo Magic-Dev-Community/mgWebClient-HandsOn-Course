@@ -5,4 +5,5 @@ We'll follow the syllabus of MSE's online lessons found here: <a href="https://w
 
 ---
 <br/>
+
 [Lesson 0 - Prerequisites](/L00-Prerequisites/)
