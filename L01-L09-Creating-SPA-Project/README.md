@@ -35,7 +35,7 @@ Login Program Task Properties Behavior Confirm Update should be set No
 Json for menu expression after login in the screen shot is wrong: contains erroneous String parseJS eval fragment
 
 Login program checker error message:
-"Performamce multiple accesses to server please check if they can be combined" is never explained
+"Performance multiple accesses to server please check if they can be combined" is never explained
 
 Custom form property expression in StartProgram for User needs to be trim(A) so that span display logic works properly and orphan Hello: doesn't display
 
