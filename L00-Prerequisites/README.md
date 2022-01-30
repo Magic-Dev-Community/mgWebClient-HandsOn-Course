@@ -9,8 +9,9 @@ Navigate: Documents, Introduction, Quickstart<br/>
 
 - Ensure IIS is installed and working
 - Install Magic XPA v4.8
-- Install Node.js v14.18.2
-  - node-v14.18.2-x64.msi hosted on https://nodejs.org/download/release/v14.18.2/
+  - Magic xpa_048.exe is available from http://downloads.magicsoftware.com
+- Install Node.js v14.18.3
+  - node-v14.18.3-x64.msi hosted on https://nodejs.org/download/release/v14.18.3/
 - Install Angular CLI
     ```
     npm install -g @angular/cli
