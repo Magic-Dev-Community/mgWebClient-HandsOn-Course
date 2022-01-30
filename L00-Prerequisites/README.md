@@ -1,13 +1,13 @@
 # mgWebClient-HandsOn-Course
 ## Lesson 0 - Pre-requisites
 
-I'm not going to duplicate materials that exist on MSE's site for the course, but here is a list of installs and configuration actions required prior to beginning the course.
+I'm not going to duplicate materials that exist on MSE's site for the course, but here is a list of installs and configuration actions required prior to beginning.
 
 From: https://webclient.magicsoftware.com/ 
 Navigate: Documents, Introduction, Quickstart<br/>
 (The website ~~stupidly~~ doesn't allow deep-linking)
 
-- Ensure IIS in installed and working
+- Ensure IIS is installed and working
 - Install Magic XPA v4.8
 - Install Node.js v14.18.2
 - Install Angular CLI
