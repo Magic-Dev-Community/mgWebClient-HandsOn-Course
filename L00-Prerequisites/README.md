@@ -11,7 +11,7 @@ Navigate: Documents, Introduction, Quickstart<br/>
 - Install Magic XPA v4.8
 - Install Node.js v14.18.2
     ```
-    [node-v14.18.2-x64.msi](https://nodejs.org/download/release/v14.18.2/node-v14.18.2-x64.msi) hosted on https://nodejs.org/download/release/v14.18.2/
+    node-v14.18.2-x64.msi hosted on https://nodejs.org/download/release/v14.18.2/
     ```
 - Install Angular CLI
     ```
