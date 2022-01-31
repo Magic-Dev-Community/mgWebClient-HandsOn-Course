@@ -1,0 +1,30 @@
+ .Table1TableContainerProps {
+  flex: 1 1 auto;
+  padding: 0.25rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  display: block;
+  overflow: auto;
+  table-layout: fixed;
+ }
+
+ .Table4_table_rowProps:hover {
+   background-color:lightskyblue solid 1px;
+ }
+
+ .selected {
+   background: #F5F5F5;
+ }
+ ::ng-deep .mat-header-cell{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 15px;
+   font-weight: bold;
+   color: antiquewhite;
+ }
+ ::ng-deep .mat-header-row{
+   min-height: 35px;
+    background: rgb(50, 53, 230);
+ }
+ ::ng-deep .mat-column{
+   color: antiquewhite;
+ }

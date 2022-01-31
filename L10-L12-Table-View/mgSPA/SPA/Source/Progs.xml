@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14080.00"/>
+    <WithIsn val="Y"/>
+    <Exe comp="-1"/>
+    <LastIsn val="14"/>
+    <LastIsnFolder val="3"/>
+    <Folders>
+      <Folder id="1">
+        <Name val="Main"/>
+      </Folder>
+      <Folder id="2">
+        <Name val="Admin"/>
+        <WebModule val="Y"/>
+      </Folder>
+      <Folder id="3">
+        <Name val="Batch"/>
+      </Folder>
+    </Folders>
+  </Header>
+
+  <ProgramsRepositoryOutLine>
+    <Programs>
+      <Program id="1"/>
+      <Program FolderIsn="1" id="2"/>
+      <Program FolderIsn="1" id="3"/>
+      <Program FolderIsn="1" id="5"/>
+      <Program FolderIsn="1" id="6"/>
+      <Program FolderIsn="2" id="11"/>
+      <Program FolderIsn="2" id="12"/>
+      <Program FolderIsn="2" id="13"/>
+      <Program FolderIsn="2" id="14"/>
+      <Program FolderIsn="3" id="7"/>
+    </Programs>
+  </ProgramsRepositoryOutLine>
+
+</Application>

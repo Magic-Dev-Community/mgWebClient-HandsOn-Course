@@ -1,0 +1,108 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.City2"
+    >
+        <div style="display: flex; flex-direction: row">
+            <div
+                [magic]="mgc.Table1"
+                class="container_border"
+            >
+                <table>
+                    <th>
+                        <label>
+                            City
+                        </label>
+                    </th>
+                    <th>
+                        <label>
+                            Country
+                        </label>
+                    </th>
+                    <ng-container *ngFor="let row of task.Records.list">
+                        <tr
+                            *ngIf="mg.ifRowCreated(row) && !mg.isDataviewEmpty()"
+                            id="row"
+                            [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                            class="table_row"
+                            [ngClass]="{ 'selected': mg.isRowSelected(mgc.Table1, row.rowId)}"
+                            [class.selected]="tableService.getSelectedRow() === row.rowId"
+                            (click)="tableService.selectRow(row.rowId)"
+                            [magicRow]="row?.rowId"
+                        >
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    [magic]="mgc.CapitalCities_City"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.CapitalCities_City"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.CapitalCities_City
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.CapitalCities_City"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.CapitalCities_City, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    [magic]="mgc.CapitalCities_Country"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.CapitalCities_Country"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.CapitalCities_Country
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.CapitalCities_Country"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.CapitalCities_Country, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-container>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

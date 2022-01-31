@@ -1,0 +1,12 @@
+<UL >
+  <LI *ngFor="let item of _source" >
+    <span *ngIf="item.children" (click)="liToggle(item,$event)">
+      <i  [className]="'fa fa-fw '+ item.icon"></i>
+      {{item.name}}
+    <side-menu [source]="item.children" [class.onOff]="item.isOpen" ></side-menu>
+    </span>
+          <a *ngIf="!item.children"  [routerLink]=item.url (click)="aClick($event)">
+            <i  [className]="'fa fa-fw '+ item.icon"></i>
+            {{item.name}}</a>
+    </LI>
+  </UL>
