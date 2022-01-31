@@ -18,6 +18,9 @@ server-config.json screenshot and code don't match
 
 package.json is not in the src folder (page incorrectly lists src\package.json)
 
+Lesson 5:
+
+in Startprogram.component.html sample code need to replace name of magic function from mg.getCustomerProperty to mg.getCustomProperty
 
 Lesson 8:
 
