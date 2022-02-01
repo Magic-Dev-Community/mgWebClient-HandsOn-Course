@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+  <Header>
+    <Version val="14050.00"/>
+    <APPLICATION val="N"/>
+    <WithIsn val="N"/>
+    <WITH_MODELS val="N"/>
+    <MAIN_PRG_VARS val="1"/>
+    <MAIN_PRG_DSPS val="1"/>
+    <STP END="1" START="1"/>
+  </Header>
+ <DataSourceRepository>
+  <DataObjects>
+<DataObject PhysicalName="Cities" Resident="N" data_source="SQLite Database" name="CapitalCities">
+  <Encrypt val="N"/>
+  <Cache val="D"/>
+  <IdentifyRowModifications val="U"/>
+  <HasHint val="Y"/>
+  <Cursor val="D"/>
+  <CheckExistence val="D"/>
+  <ObjectType val="T"/>
+  <Position val="D"/>
+  <Columns>
+    <Column id="1" name="City">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="City"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="City" PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Country">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Country"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Country" PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+  <Indexes>
+    <Index id="1" name="by_City">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="by_City"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="30"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+  <ForeignKeys/>
+  <WebS/>
+
+ </DataObject>
+ </DataObjects>
+ </DataSourceRepository>
+
+</Application> 
