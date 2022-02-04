@@ -1,0 +1,109 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"City2",
+		"component_path":	"City2/",
+		"component_uniquename":	"City2_City2"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	621,
+		"height":	332
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Table1",
+				"table_row_height":	24,
+				"web_style":	3,
+				"table_title_height":	19,
+				"common_line_id":	"line13"
+			},
+			"coordinates":	{
+				"x":	12,
+				"y":	13,
+				"width":	592,
+				"height":	302
+			},
+			"hint":	null,
+			"controlType":	"A",
+			"children":	[
+				{
+					"style":	null,
+					"props":	{
+						"id":	"Column4",
+						"column_title":	"City",
+						"sortable":	true,
+						"is_table_child":	true,
+						"web_style":	3
+					},
+					"coordinates":	{
+						"width":	224
+					},
+					"hint":	null,
+					"controlType":	"K",
+					"children":	[
+						{
+							"style":	null,
+							"props":	{
+								"id":	"CapitalCities_City",
+								"mgformat":	"mgFormat",
+								"attribute":	"A",
+								"is_table_child":	true,
+								"web_style":	3
+							},
+							"coordinates":	{
+								"x":	16,
+								"y":	36,
+								"width":	216,
+								"height":	20
+							},
+							"hint":	null,
+							"controlType":	"T",
+							"children":	null
+						}
+					]
+				},
+				{
+					"style":	null,
+					"props":	{
+						"id":	"Column5",
+						"column_title":	"Country",
+						"is_table_child":	true,
+						"web_style":	3
+					},
+					"coordinates":	{
+						"width":	364
+					},
+					"hint":	null,
+					"controlType":	"K",
+					"children":	[
+						{
+							"style":	null,
+							"props":	{
+								"id":	"CapitalCities_Country",
+								"mgformat":	"mgFormat",
+								"attribute":	"A",
+								"is_table_child":	true,
+								"web_style":	3
+							},
+							"coordinates":	{
+								"x":	240,
+								"y":	36,
+								"width":	356,
+								"height":	20
+							},
+							"hint":	null,
+							"controlType":	"T",
+							"children":	null
+						}
+					]
+				}
+			]
+		}
+	]
+}

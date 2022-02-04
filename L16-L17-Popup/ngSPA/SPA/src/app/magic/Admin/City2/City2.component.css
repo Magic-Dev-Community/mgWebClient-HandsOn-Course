@@ -1,0 +1,39 @@
+  .table_scrollBar{
+    height: 600px;
+    width: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: auto;
+  }
+  table{
+    width:100%;
+  }
+
+  th {
+    position: sticky;
+    top: 0px;  /* 0px if you don't have a navbar, but something is required */
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: left;
+    background-color: #167F92;
+    color: white;
+    font-weight: bold;
+    height: 15px;
+    }
+
+  tr {
+      text-align: left;
+    }
+    tr:nth-child(odd){background-color: #f2f2f2;}
+    tr:hover {background-color: #167F92; color: white}
+
+
+  td{
+    border: 1px solid #ddd;
+    padding: 1px;
+  }
+
+
+  .selected {
+    background: #456;
+  }

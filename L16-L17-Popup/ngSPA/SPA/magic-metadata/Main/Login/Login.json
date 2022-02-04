@@ -1,0 +1,92 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"Login",
+		"component_path":	"Main/Login/",
+		"component_uniquename":	"Login_Login"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	0,
+		"height":	0
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vUser",
+				"tooltip":	{
+					"value":	null,
+					"has_exp":	true
+				},
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line13"
+			},
+			"coordinates":	{
+				"x":	69,
+				"y":	13,
+				"width":	76,
+				"height":	20
+			},
+			"hint":	{
+				"text":	{
+					"value":	"User",
+					"has_exp":	false
+				},
+				"hint_color":	null
+			},
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vPassword",
+				"tooltip":	{
+					"value":	null,
+					"has_exp":	true
+				},
+				"password_edit":	true,
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line46"
+			},
+			"coordinates":	{
+				"x":	69,
+				"y":	46,
+				"width":	76,
+				"height":	20
+			},
+			"hint":	{
+				"text":	{
+					"value":	"Password",
+					"has_exp":	false
+				},
+				"hint_color":	null
+			},
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"BTLogin",
+				"format":	"Login",
+				"common_line_id":	"line95"
+			},
+			"coordinates":	{
+				"x":	69,
+				"y":	95,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		}
+	]
+}

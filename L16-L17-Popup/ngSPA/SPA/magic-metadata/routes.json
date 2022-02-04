@@ -1,0 +1,67 @@
+[
+	{
+		"module_name":	"",
+		"routesArray":	[
+			{
+				"RouteName":	"Login",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"Welcome",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"Logout",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"City1",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"City2",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"City3",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"CreateAthlete",
+				"ModuleName":	"Athlete",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"ViewAthlete",
+				"ModuleName":	"Athlete",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"ViewAthleteNative",
+				"ModuleName":	"Athlete",
+				"OutletName":	"",
+				"children":	null
+			}
+		]
+	},
+	{
+		"module_name":	"Athlete",
+		"routesArray":	[
+			
+		]
+	}
+]

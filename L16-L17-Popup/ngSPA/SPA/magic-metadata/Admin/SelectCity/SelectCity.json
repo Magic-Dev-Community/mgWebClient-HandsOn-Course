@@ -1,0 +1,75 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"SelectCity",
+		"window_type":	12,
+		"component_path":	"SelectCity/",
+		"component_uniquename":	"SelectCity_SelectCity"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	247,
+		"height":	305
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Table6",
+				"table_row_height":	24,
+				"table_title_height":	19,
+				"common_line_id":	"line13"
+			},
+			"coordinates":	{
+				"x":	12,
+				"y":	13,
+				"width":	227,
+				"height":	283
+			},
+			"hint":	null,
+			"controlType":	"A",
+			"children":	[
+				{
+					"style":	null,
+					"props":	{
+						"id":	"Column9",
+						"column_title":	"City",
+						"sortable":	true,
+						"is_table_child":	true,
+						"web_style":	2
+					},
+					"coordinates":	{
+						"width":	224
+					},
+					"hint":	null,
+					"controlType":	"K",
+					"children":	[
+						{
+							"style":	null,
+							"props":	{
+								"id":	"CapitalCities_City",
+								"mgformat":	"mgFormat",
+								"attribute":	"A",
+								"is_table_child":	true,
+								"web_style":	2,
+								"common_line_id":	"line36"
+							},
+							"coordinates":	{
+								"x":	16,
+								"y":	36,
+								"width":	216,
+								"height":	20
+							},
+							"hint":	null,
+							"controlType":	"T",
+							"children":	null
+						}
+					]
+				}
+			]
+		}
+	]
+}

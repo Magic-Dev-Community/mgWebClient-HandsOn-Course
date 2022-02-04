@@ -1,0 +1,36 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"StartProgram",
+		"component_path":	"Main/StartProgram/",
+		"component_uniquename":	"StartProgram_StartProgram"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	400,
+		"height":	325
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	null,
+			"props":	{
+				"id":	"MainOutlet",
+				"is_router_outlet":	true,
+				"default_outlet":	true,
+				"common_line_id":	"line13"
+			},
+			"coordinates":	{
+				"x":	13,
+				"y":	13,
+				"width":	368,
+				"height":	295
+			},
+			"hint":	null,
+			"controlType":	"F",
+			"children":	null
+		}
+	]
+}

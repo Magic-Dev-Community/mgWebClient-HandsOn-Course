@@ -1,0 +1,410 @@
+<form
+  name="screenFormGroup"
+  novalidate
+  [formGroup]="screenFormGroup"
+
+>
+  <Div class="form-style">
+    <h1>Create Athlete</h1>
+    <ul>
+      <li>
+        <input
+          type="text"
+          magic="vName"
+          formControlName="vName"
+          class="field-style field-full align-none"
+          placeholder="Name"
+          required
+          minlength="3"
+          maxlength="30"
+        />
+        <div
+          class="alrt"
+          *ngIf="
+            screenFormGroup.get('vName').touched &&
+            screenFormGroup.get('vName').errors &&
+            screenFormGroup.get('vName').errors.required
+            "
+        >
+          Name is Required
+        </div>
+        <div
+          class="alrt"
+          *ngIf="
+            screenFormGroup.get('vName').touched &&
+            screenFormGroup.get('vName').errors &&
+            screenFormGroup.get('vName').errors.minlength
+          "
+        >
+          Name should have minimum of
+          {{
+            screenFormGroup.get("vName").errors.minlength.requiredLength
+          }}
+          characters.
+        </div>
+      </li>
+
+      <!--city-->
+      <li>
+        <ul class="col-12">
+          <li class="col-6" style="float: left; padding: 0px">
+            <input
+              type="text"
+              style="width:75%"
+              magic="vCity"
+              formControlName="vCity"
+              mgFormat
+              class="field-style field-split align-left"
+              placeholder="City"
+              required
+            />
+            <button magic="SelectCity" style="margin-top: 5px; margin-left: 5px;"><i class="btnSelect fa fa-list"></i></button>
+            <mgError magic="vCity"> </mgError>
+          </li>
+
+          <!--phone-->
+          <li class="col-6" style="float: left; padding: 0px">
+            <input
+              type="tel"
+              pattern="^[0-9]{10}$"
+              style="width:90%"
+              magic="vPhone"
+              formControlName="vPhone"
+              mgFormat
+              class="field-style field-split align-right"
+              placeholder="Phone"
+              required
+              minlength="10"
+              maxlength="10"
+            />
+            <div
+              class="alrt"
+              style="margin-left: 20px; margin-bottom: 38px"
+              *ngIf="
+                screenFormGroup.get('vPhone').touched &&
+                screenFormGroup.get('vPhone').errors &&
+                screenFormGroup.get('vPhone').errors.required
+              "
+            >
+              Phone is Required
+            </div>
+
+            <div
+              class="alrt"
+              style="margin-left: 20px; margin-bottom: 38px"
+              *ngIf="
+                screenFormGroup.get('vPhone').touched &&
+                screenFormGroup.get('vPhone').errors &&
+                screenFormGroup.get('vPhone').errors?.pattern
+              "
+            >
+              Phone number is not valid
+            </div>
+          </li>
+        </ul>
+      </li>
+
+      <!--email && screenFormGroup.get('vEmail').errors.email-->
+      <li>
+        <input
+          type="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$"
+          magic="vEmail"
+          formControlName="vEmail"
+          mgFormat
+          class="field-style field-full align-none"
+          placeholder="Email"
+          required
+        />
+        <div
+          class="alrt"
+          *ngIf="
+            screenFormGroup.get('vEmail').touched &&
+            screenFormGroup.get('vEmail').errors &&
+            screenFormGroup.get('vEmail').errors.required
+          "
+        >
+          Email is Required
+        </div>
+
+        <div
+          class="alrt"
+          *ngIf="
+            screenFormGroup.get('vEmail').touched &&
+            screenFormGroup.get('vEmail').errors &&
+            screenFormGroup.get('vEmail').errors?.pattern
+          "
+        >
+          Email must be a valid email address
+        </div>
+      </li>
+
+      <!--date-->
+      <li>
+        <input
+          type="date"
+          name="aa"
+          magic="vDateOfBirth"
+          formControlName="vDateOfBirth"
+          dateInput
+          mgFormat
+          class="field-style field-split align-left"
+          placeholder="Date Of Birth"
+          required
+        />
+      </li>
+
+      <li>
+        <!--height-->
+        <input
+          type="number"
+          magic="vHeight"
+          formControlName="vHeight"
+          mgFormat
+          class="field-style field-split align-left"
+          placeholder="Height"
+          required
+        />
+
+        <!--weight-->
+        <input
+          type="number"
+          magic="vWeight"
+          formControlName="vWeight"
+          mgFormat
+          class="field-style field-split align-right"
+          placeholder="Weight"
+          required
+        />
+      </li>
+
+      <!--comment-->
+      <li>
+        <textarea
+          name="field5"
+          magic="vComment"
+          formControlName="vComment"
+          mgFormat
+          class="field-style"
+          placeholder="Message"
+          required
+        ></textarea>
+      </li>
+      <li>
+        <button
+          magic="Create"
+          class="btn btn-sm"
+          style="background: #1F6D8B;
+          color: white;"
+          type="submit"
+          [disabled]="!screenFormGroup.valid"
+          value="Create Athlete"
+          (click)="onSubmit()"
+        > Create Athlete</button>
+      </li>
+    </ul>
+  </Div>
+</form>
+
+
+
+<!--
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.CreateAthlete"
+    >
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label1"
+                class="lable_overflow"
+            >
+                vName:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.vName"
+                            [formControlName]="mgc.vName"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.vName> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label3"
+                class="lable_overflow"
+            >
+                vCity:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.vCity"
+                            [formControlName]="mgc.vCity"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.vCity> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label5"
+                class="lable_overflow"
+            >
+                vPhone:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.vPhone"
+                            [formControlName]="mgc.vPhone"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.vPhone> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label7"
+                class="lable_overflow"
+            >
+                vEmail:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.vEmail"
+                            [formControlName]="mgc.vEmail"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.vEmail> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label9"
+                class="lable_overflow"
+            >
+                vDateOfBirth:
+            </label>
+            <div>
+                <mat-form-field
+                    [magic]="mgc.vDateOfBirth"
+                    [eventsOnly]=true
+                >
+                    <input
+                        matInput
+                        [matDatepicker]="vDateOfBirth"
+                        [magic]="mgc.vDateOfBirth"
+                        [formControlName]="mgc.vDateOfBirth"
+                        mgFormat
+                    >
+                    <mat-datepicker-toggle
+                        matSuffix
+                        [for]="vDateOfBirth"
+                        *ngIf="mg.checkIsReadOnly(mgc.vDateOfBirth)"
+                    >
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #vDateOfBirth></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label11"
+                class="lable_overflow"
+            >
+                vHeight:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='number'
+                            [magic]="mgc.vHeight"
+                            [formControlName]="mgc.vHeight"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.vHeight> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label13"
+                class="lable_overflow"
+            >
+                vWeight:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            currencyMask
+                            [options]="mg.getNumericPicture(mg.getPicture(mgc.vWeight))"
+                            [magic]="mgc.vWeight"
+                            [formControlName]="mgc.vWeight"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.vWeight> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label15"
+                class="lable_overflow"
+            >
+                vComment:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.vComment"
+                            [formControlName]="mgc.vComment"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.vComment> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <button
+                mat-raised-button
+                color="primary"
+                [magic]="mgc.Create"
+            >
+                Create
+            </button>
+        </div>
+    </div>
+</div>
+//-->
