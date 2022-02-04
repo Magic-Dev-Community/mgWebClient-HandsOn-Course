@@ -1,0 +1,353 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.ViewAthleteNative"
+    >
+        <div style="display: flex; flex-direction: row">
+            <div
+                [magic]="mgc.Table1"
+                class="table_scrollBar container_border"
+                infinite-scroll
+                [infiniteScrollDistance]="2"
+                [infiniteScrollThrottle]="500"
+                (scrolled)="tableService.onScrollDown()"
+                [scrollWindow]="false"
+            >
+                <table>
+                  <th style="width:3%">ID</th>
+                  <th style="width:17%">Name</th>
+                  <th style="width:6%">City</th>
+                  <th style="width:10%">Phone</th>
+                  <th style="width:18%">Email</th>
+                  <th style="width:15%">Birth Date</th>
+                  <th style="width:3%">Height</th>
+                  <th style="width:3%">Weight</th>
+                  <th style="width:11%"></th>
+                  <!--th style="width:9%"></th-->
+                  <th style="width:11%"></th>
+                    <ng-container *ngFor="let row of task.Records.list">
+                        <tr
+                            *ngIf="mg.ifRowCreated(row) && !mg.isDataviewEmpty()"
+                            id="row"
+                            [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                            class="table_row"
+                            [ngClass]="{ 'selected': mg.isRowSelected(mgc.Table1, row.rowId)}"
+                            [class.selected]="tableService.getSelectedRow() === row.rowId"
+                            (click)="tableService.selectRow(row.rowId)"
+                            [magicRow]="row?.rowId"
+                        >
+                        <td style="width:15%">
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    type='number'
+                                                    [magic]="mgc.Athlete_ID"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Athlete_ID"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Athlete_ID
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Athlete_ID"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.Athlete_ID, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    [magic]="mgc.Athlete_Name"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Athlete_Name"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Athlete_Name
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Athlete_Name"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.Athlete_Name, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    [magic]="mgc.Athlete_City"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Athlete_City"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Athlete_City
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Athlete_City"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.Athlete_City, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    [magic]="mgc.Athlete_Phone"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Athlete_Phone"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Athlete_Phone
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Athlete_Phone"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.Athlete_Phone, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    [magic]="mgc.Athlete_Email"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Athlete_Email"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Athlete_Email
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Athlete_Email"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.Athlete_Email, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field
+                                            [magic]="mgc.Athlete_DateOfBirth"
+                                            [rowId]="row.rowId"
+                                            [eventsOnly]=true
+                                            *ngIf="mg.isRowInRowEditing(row)"
+                                        >
+                                            <div style="display: flex; flex-direction: row">
+                                                <input
+                                                    matInput
+                                                    [matDatepicker]="Athlete_DateOfBirth"
+                                                    [magic]="mgc.Athlete_DateOfBirth"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Athlete_DateOfBirth"
+                                                    mgFormat
+                                                >
+                                                <mat-datepicker-toggle
+                                                    matSuffix
+                                                    [for]="Athlete_DateOfBirth"
+                                                    *ngIf="mg.checkIsReadOnly(mgc.Athlete_DateOfBirth) &&  mg.isRowInRowEditing(row)"
+                                                >
+                                                </mat-datepicker-toggle>
+                                                <mat-datepicker #Athlete_DateOfBirth></mat-datepicker>
+                                            </div>
+                                        </mat-form-field>
+                                    </div>
+                                    <label
+                                        *ngIf="!mg.isRowInRowEditing(row)"
+                                        [magic]="mgc.Athlete_DateOfBirth"
+                                        [rowId]="row.rowId"
+                                    >
+                                        {{mg.getValue(mgc.Athlete_DateOfBirth, row.rowId)
+| magicDate : mgc.Athlete_DateOfBirth}}
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    type='number'
+                                                    [magic]="mgc.Athlete_Height"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Athlete_Height"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Athlete_Height
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Athlete_Height"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.Athlete_Height, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    currencyMask
+                                                    [options]="mg.getNumericPicture(mg.getPicture(mgc.Athlete_Weight))"
+                                                    [magic]="mgc.Athlete_Weight"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Athlete_Weight"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Athlete_Weight
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Athlete_Weight"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getFormattedValue(mgc.Athlete_Weight, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button
+                                    mat-raised-button
+                                    *ngIf="!mg.isRowInRowEditing(row)"
+                                    color="primary"
+                                    [magic]="mgc.EnterRowEditing"
+                                    [rowId]="row.rowId"
+                                >
+                                    Edit
+                                </button>
+                                <button
+                                    mat-raised-button
+                                    *ngIf="mg.isRowInRowEditing(row)"
+                                    color="primary"
+                                    [magic]="mgc.SaveRowEditing"
+                                    [rowId]="row.rowId"
+                                >
+                                    Save
+                                </button>
+                                <button
+                                    mat-raised-button
+                                    *ngIf="mg.isRowInRowEditing(row)"
+                                    color="primary"
+                                    [magic]="mgc.CancelRowEditing"
+                                    [rowId]="row.rowId"
+                                >
+                                    Cancel
+                                </button>
+                            </td>
+                        </tr>
+                    </ng-container>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

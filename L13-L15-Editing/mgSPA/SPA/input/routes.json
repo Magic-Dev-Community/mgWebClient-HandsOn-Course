@@ -43,6 +43,18 @@
 				"ModuleName":	"Athlete",
 				"OutletName":	"",
 				"children":	null
+			},
+			{
+				"RouteName":	"ViewAthlete",
+				"ModuleName":	"Athlete",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"ViewAthleteNative",
+				"ModuleName":	"Athlete",
+				"OutletName":	"",
+				"children":	null
 			}
 		]
 	},

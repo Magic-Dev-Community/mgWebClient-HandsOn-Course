@@ -16,6 +16,12 @@ export const magicGenComponents = [ Logout_Logout ,  Welcome_Welcome ,  Login_Lo
 ];
 
 
-export const LazyLoadModulesMap = { CreateAthlete_CreateAthlete : { moduleName : 'MagicAthleteModule',
+export const LazyLoadModulesMap = { ViewAthleteNative_ViewAthleteNative : { moduleName : 'MagicAthleteModule',
+                                          modulePath : 'src/app/magic/Athlete/magic.gen.lib.module'},
+  ViewAthlete_ViewAthlete : { moduleName : 'MagicAthleteModule',
+                                          modulePath : 'src/app/magic/Athlete/magic.gen.lib.module'},
+  AthleteList_AthleteList : { moduleName : 'MagicAthleteModule',
+                                          modulePath : 'src/app/magic/Athlete/magic.gen.lib.module'},
+  CreateAthlete_CreateAthlete : { moduleName : 'MagicAthleteModule',
                                           modulePath : 'src/app/magic/Athlete/magic.gen.lib.module'},
  };

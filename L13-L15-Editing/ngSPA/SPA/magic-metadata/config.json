@@ -16,7 +16,7 @@
 			"module_name":	"Athlete",
 			"load_on_demand":	true,
 			"form_files":	[
-				"CreateAthlete/CreateAthlete"
+				"ViewAthleteNative/ViewAthleteNative"
 			]
 		}
 	],

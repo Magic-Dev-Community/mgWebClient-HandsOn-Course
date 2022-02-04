@@ -39,6 +39,16 @@ export const routes: Routes = [
         loadChildren: () => import(`./magic/Athlete/magic.gen.lib.module`).then(m => m.MagicAthleteModule),
 
     },
+    {
+        path: 'ViewAthlete',
+        loadChildren: () => import(`./magic/Athlete/magic.gen.lib.module`).then(m => m.MagicAthleteModule),
+
+    },
+    {
+        path: 'ViewAthleteNative',
+        loadChildren: () => import(`./magic/Athlete/magic.gen.lib.module`).then(m => m.MagicAthleteModule),
+
+    },
 
 ];
 
