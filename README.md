@@ -10,4 +10,4 @@ We'll follow the syllabus of MSE's online lessons found here: <a href="https://w
 [Lesson 1-9 - Creating SPA Project](/L01-L09-Creating-SPA-Project/)<br/>
 [Lesson 10-12 - Table View](/L10-L12-Table-View/)<br/>
 [Lesson 13-15 - Editing](/L13-L15-Editing/)<br/>
-[Lesson 16-17 - Popup](/L13-L15-Popup/)
+[Lesson 16-17 - Popup](/L16-L17-Popup/)
