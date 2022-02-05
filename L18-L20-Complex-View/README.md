@@ -16,7 +16,8 @@ Thought #1: This stuff actually works pretty well and pretty easy.
 ```
 Thought #2: You can't copy/paste html/ts code from the course and expect it to work.
 It's a whole different version or approach or it just doesn't match v4.8. You have to make your peace with this. 
-The course is actually straightforward once you accept it's an out-of-date guide map to a city where the city planners have changed street signs, routes and whole buildings. 
+The course is actually straightforward once you accept it's an out-of-date guide map to a city where the 
+city planners have changed street signs, routes and whole buildings. 
 I don't think it's worthwhile relying on the course for how they make changes to the html or ts, 
 swooping in at the last minute to copy/paste a makeover. 
 That will lead to pain. 
