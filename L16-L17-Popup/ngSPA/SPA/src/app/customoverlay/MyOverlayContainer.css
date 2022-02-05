@@ -1,0 +1,701 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.align_center {
+  text-align: center;
+}
+
+.align_right {
+  text-align: right;
+}
+
+.multiline {
+  word-break: break-all;
+  white-space: pre-line;
+}
+
+.edit_multiline {
+  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.thin_border {
+  border: 1px solid #F00;
+}
+
+.thick_border {
+  border: 2px solid #F00;
+}
+
+.hidden_border {
+  border-style: hidden;
+}
+
+.emboss_border {
+  border: 1px solid;
+}
+
+.threed_border {
+  border-style: outset;
+}
+
+.threedsunken_border {
+  border-style: inset;
+}
+
+.twod_border {
+  border: 2px solid;
+}
+
+.windows_border {
+  border: 2px solid;
+}
+
+.tab_control {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab_button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.tab_button_active {
+  background-color: #ccc;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.tab_button:hover {
+  background-color: #ddd;
+}
+
+.tab_content {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  clear: both;
+}
+
+/* style for input on table*/
+.InputPropsForRowEditing {
+  text-decoration: underline;
+}
+
+.button_image_background_size {
+  background-size: 100% 100%;
+}
+
+.lable_overflow {
+  overflow: hidden;
+}
+
+.table_scrollBar {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.container_border {
+  border: lightskyblue solid 1px;
+}
+
+.selected {
+  background: #F5F5F5;
+}
+
+.table_row:hover {
+  background-color: #EEEEEE;
+}
+
+/* remark : we decided to give the end user the normal list box without you update the behavior*/
+/*for matirial list box control*/
+/*hide the check box*/
+/*mat-list-option mat-pseudo-checkbox.mat-pseudo-checkbox{*/
+/*display: none;*/
+/*}*/
+/*!*for matirial list box control*!*/
+/*!* for selected item that is true the style will be by following *!*/
+/*mat-list-option[aria-selected = "true"]*/
+/*{*/
+/*background-color: blue;*/
+/*}*/
+/* The Modal (background) */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin-left: 38%;
+  margin-right: 42%;
+
+}
+
+img.center {
+  display: block;
+  margin: 0 auto;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 20%;
+  top: 10%;
+  width: 50%;
+  /* Full width */
+  height: 50%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(218, 27, 117);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Black w/ opacity */
+  cursor: pointer;
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  color: #008B8B;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+#overlay {
+  position: absolute;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 50%;
+  /* Full width (cover the whole page) */
+  height: 50%;
+  /* Full height (cover the whole page) */
+  top: 100;
+  left: 50;
+  right: 50;
+  bottom: 100;
+  background-color: rgba(255, 255, 255, 0);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
+
+#overlaybg {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #7FFF00;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.test {
+  height: 50px;
+  width: 50px;
+  color: #DC143C;
+  border-radius: 5px;
+
+}
+
+.my-overlay-foreground {
+  background-color: #7FFFD4;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.my-overlay-foreground1 {
+  background-color: #808000;
+  color: #00FFFF;
+  top: 50%;
+  left: 50%;
+  margin-left: 220px;
+}
+
+.container-box {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.overlay-box1 {
+  margin: auto;
+  /* transform:translate(-50%, -50%);
+    color: blue; background: #7FFFD4; opacity: 1;
+    z-index: 1000;
+    border-radius: 10px; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+}
+
+.overlay-mgtheme {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 285px;
+  transform: translate(-50%, -50%);
+  color: #0000ff;
+  background: #7FFFD4;
+  opacity: 1;
+  z-index: 1000;
+  border-radius: 20px;
+  padding: 3px;
+}
+
+.overlay-mgtheme:hover {
+  color: #ffff24;
+  opacity: 1;
+}
+
+.overlay-fullbg {
+  background: #b34d4d;
+}
+
+.fullbg-overlay {
+  opacity: 0;
+  background-color: aqua;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fullbg-overlay1 {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.CloseBtnTrans {
+  height: 50px;
+  width: 50px;
+  color: black;
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFF00;
+  background: #B22222;
+  opacity: .8;
+  z-index: 1000;
+  border-radius: 20px;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: show;
+  width: 160px;
+  background-color: #555;
+  color: #87CEEB;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  overflow: hidden;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.full {
+  background: url(https://raw.githubusercontent.com/solodev/transparent-overlay/master/overlay-img-1.jpg) 0 0 no-repeat;
+  min-height: 634px;
+}
+
+.half {
+  background: url(https://raw.githubusercontent.com/solodev/transparent-overlay/master/overlay-img-2.jpg) 0 0 no-repeat;
+  min-height: 301px;
+  margin-bottom: 30px;
+}
+
+.half2 {
+  background: url(https://raw.githubusercontent.com/solodev/transparent-overlay/master/overlay-img-3.jpg) 0 0 no-repeat;
+  min-height: 301px;
+}
+
+.full,
+.half,
+.half2 {
+  background-size: cover;
+  position: relative;
+}
+
+.full:hover .overlay-effect,
+.half:hover .overlay-effect,
+.half2:hover .overlay-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.overlay-effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+  width: 50%;
+  height: 50%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(259, 67, 95, 0.7);
+  overflow: hidden;
+  left: 50%;
+  margin-top: 100px;
+  margin-left: -220px;
+  /* foreground-color:#4863A0;   */
+}
+
+.full a,
+.half a,
+.half2 a {
+  color: #fff;
+}
+
+.full h3,
+.half h3,
+.half2 h3 {
+  padding: 15px 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .full,
+  .half,
+  .half2 {
+    margin-bottom: 10px;
+  }
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btnNew {
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+/* Green */
+.success {
+  border-color: #4CAF50;
+  color: green;
+}
+
+.success:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btnNew1 {
+  color: darkblue;
+  background-color: Transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.Closebutton {
+  margin-top: 0%;
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.my-overlay-foreground2 {
+  background-color: #FFDAB9;
+  color: black;
+  top: 50%;
+  left: 50%;
+  margin-left: 220px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(259, 67, 95, 0.7);
+}
+
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+  position: relative;
+
+}
+
+.container1 {
+  padding: 12px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modallogin {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.loginbutton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overlay-boxNDC {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 65%;
+  transform: translate(-50%, -50%);
+  color: purple;
+  background-color: #7FFFD4;
+  opacity: 1;
+  z-index: 1000;
+  border-radius: 15px;
+
+}
+

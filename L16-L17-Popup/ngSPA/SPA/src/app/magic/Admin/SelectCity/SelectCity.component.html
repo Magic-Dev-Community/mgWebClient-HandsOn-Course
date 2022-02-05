@@ -36,7 +36,7 @@
                             >
                                 <div
                                     [formGroup]="mg.getFormGroupByRow(row.rowId)"
-                                    style="display: flex; flex-direction: row"
+                                    style="display: flex; flex-direction: row; height: 20px;"
                                 >
                                     <div>
                                         <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
@@ -74,7 +74,7 @@
                         class="table_row" tabindex="1"
                         [ngClass]="{ 'selected': selection.isSelected(row)}"
                         [magicRow]="row?.rowId"
-                        (click)="row? tableService.selectRow(row.rowId) : null"
+                        (click)="tableService.selectRow(row.rowId)"
                     >
                     </mat-row>
                 </mat-table>

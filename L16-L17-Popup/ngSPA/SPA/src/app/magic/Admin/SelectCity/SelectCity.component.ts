@@ -25,14 +25,14 @@ export class SelectCity extends BaseMatTableMagicComponent implements MagicModal
     createFormControlsAccessor(formGroup: FormGroup) {
         this.mgfc = new MgFormControlsAccessor(formGroup, this.magicServices);
     }
-    private static readonly formName: string = "SelectCity";
-    private static readonly showTitleBar: boolean = false;
+    private static readonly formName: string = "Select City";
+    private static readonly showTitleBar: boolean = true;
     private static readonly x: number = 0;
     private static readonly y: number = 0;
     private static readonly width: string = "300px";
-    private static readonly height: string = "600px";
+    private static readonly height: string = "525px";
     private static readonly isCenteredToWindow: boolean = true;
-    private static readonly shouldCloseOnBackgroundClick = true;
+    private static readonly shouldCloseOnBackgroundClick = false;
     X() {
         return SelectCity.x;
     }
