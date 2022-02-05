@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14050.00"/>
+    <APPLICATION val="N"/>
+    <WithIsn val="N"/>
+    <WITH_MODELS val="N"/>
+    <MAIN_PRG_VARS val="1"/>
+    <MAIN_PRG_DSPS val="1"/>
+    <Arguments END="6" START="6"/>
+  </Header>
+
+
+
+<ProgramsRepository>
+<RepositoryProperties>
+</RepositoryProperties>
+<Programs>
+
+<Task MainProgram="N">
+
+  <Header Description="Import - CapitalCities" Folder="Batch">
+    <ExecutionRight/>
+    <Resident val="N"/>
+    <SQL val="N"/>
+    <ReturnValue>
+      <ReturnValueAttr/>
+      <ParametersAttributes/>
+    </ReturnValue>
+    <SqlWhereExist val="N"/>
+    <TaskType val="B"/>
+    <External val="N"/>
+    <Offline val="N"/>
+    <FormType val="N"/>
+    <DotNetObjectExists val="N"/>
+    <LastModified _date="737350" _time="63758" date="18/10/2019" time="17:42:38"/>
+  </Header>
+
+  <Resource>
+    <DB>
+      <DataObject obj="1"/>
+      <Access val="W"/>
+      <Share val="W"/>
+      <Open val="N"/>
+      <Cache val="Y"/>
+      <IdentifyRowModifications val="84"/>
+    </DB>
+    <IO>
+      <Description val="Import - City"/>
+      <IOExpression val="2"/>
+      <OpenPrintDialog val="N"/>
+      <PaperSize val="68"/>
+      <Format val="L"/>
+      <Media val="S"/>
+      <Access val="R"/>
+      <Orientation val="P"/>
+      <PrintPreview val="N"/>
+      <PDF val="N"/>
+      <PrintingAllowed val="Y"/>
+      <ContentCopyingAllowed val="Y"/>
+      <ChangesAllowed val="Y"/>
+      <PageLayoutAllowed val="Y"/>
+      <Vis2LogTranslation val="N"/>
+      <FlipLines val="N"/>
+    </IO>
+    <Columns>
+      <Column id="1" name="Line">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="300"/>
+          <StoredAs id="173" val="1"/>
+          <Size id="174" val="300"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Column>
+    </Columns>
+  </Resource>
+
+  <Information>
+    <Key>
+      <Column val="1"/>
+      <Mode val="N"/>
+    </Key>
+    <DB obj="1"/>
+    <Sort>
+      <CLS val="A"/>
+    </Sort>
+    <ForceRecordDelete DEL="N"/>
+    <EndTaskCondition Exp="1"/>
+    <EvaluateEndCondition val="B"/>
+    <InitialMode val="C"/>
+    <Locate Direction="A"/>
+    <Range Direction="A"/>
+    <TaskProperties>
+      <SelectionTable val="N"/>
+      <ConfirmUpdate CNFU="N"/>
+      <ConfirmCancel val="N"/>
+      <ErrorStrategy val="R"/>
+      <LockingStrategy val="M"/>
+      <CacheStrategy val="T"/>
+      <ForceRecordSuffix val="N"/>
+      <TransactionMode val="P"/>
+      <TransactionBegin val="T"/>
+      <PreloadView val="N"/>
+      <AllowEmptyDataview val="N"/>
+      <KeepCreatedContext val="N"/>
+    </TaskProperties>
+    <SIDE_WIN>
+      <AllowOptions val="N"/>
+      <AllowQuery val="Y"/>
+      <AllowModify val="Y"/>
+      <AllowCreate val="Y"/>
+      <AllowDelete val="Y"/>
+      <AllowLocate val="Y"/>
+      <AllowRange val="Y"/>
+      <AllowIndexChange val="Y"/>
+      <AllowSorting val="Y"/>
+      <AllowIOFiles val="Y"/>
+      <RecordCycle val="Y"/>
+      <AllowEvents val="Y"/>
+      <AllowIndexOptimization val="Y"/>
+      <AllowLocationInQuery val="Y"/>
+      <AllowPrintingData val="N"/>
+    </SIDE_WIN>
+    <WIN>
+      <OpenTaskWindow val="Y"/>
+      <CloseTaskWindow val="Y"/>
+      <ForegroundWindow val="Y"/>
+      <FlipFld val="N"/>
+      <RefreshTaskWindow ReturnValue="N"/>
+    </WIN>
+    <BOX>
+      <Direction val="V"/>
+    </BOX>
+  </Information>
+
+  <TaskLogic>
+    <LogicUnit propagate="78">
+      <Level val="R"/>
+      <Type val="M"/>
+      <Scope val="S"/>
+      <EngineDirective val="S"/>
+      <ShowMessage val="Y"/>
+      <Condition val="89"/>
+      <_TotalVariabls val="3"/>
+      <_TotalVirtuals val="1"/>
+      <Event>
+        <EventType val="S"/>
+        <PublicObject comp="-1"/>
+      </Event>
+      <LogicLines>
+        <LogicLine>
+          <DATAVIEW_SRC IDX="1" Type="M">
+            <Condition val="N"/>
+            <Modifier val="B"/>
+            <Direction val="C"/>
+          </DATAVIEW_SRC>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="B">
+            <Column val="1"/>
+            <Type val="V"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="C">
+            <Column val="1"/>
+            <Type val="R"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <_DitIndexForToolkit val="4"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="D">
+            <Column val="2"/>
+            <Type val="R"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <_DitIndexForToolkit val="5"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+      </LogicLines>
+    </LogicUnit>
+    <LogicUnit propagate="78">
+      <Level val="R"/>
+      <Type val="S"/>
+      <Scope val="S"/>
+      <EngineDirective val="S"/>
+      <ShowMessage val="Y"/>
+      <Condition val="89"/>
+      <Event>
+        <EventType val="S"/>
+        <PublicObject comp="-1"/>
+      </Event>
+      <Expanded val="1"/>
+      <LogicLines>
+        <LogicLine>
+          <FormIO>
+            <OperationType val="I"/>
+            <Delimiter val="C"/>
+            <IODeviceInfo>
+              <IoDeviceIndex val="1"/>
+            </IODeviceInfo>
+            <FormEntryInfo>
+              <FormEntryIndex val="2"/>
+            </FormEntryInfo>
+            <DelimiterChar val="32"/>
+            <Condition val="Y"/>
+            <Modifier val="B"/>
+            <Direction val="C"/>
+          </FormIO>
+        </LogicLine>
+        <LogicLine>
+          <Update>
+            <Variable val="C"/>
+            <WithValue val="3"/>
+            <Incremental val="N"/>
+            <ForcedUpdate val="Y"/>
+            <Condition val="Y"/>
+            <Modifier val="B"/>
+            <Direction val="C"/>
+          </Update>
+        </LogicLine>
+        <LogicLine>
+          <Update>
+            <Variable val="D"/>
+            <WithValue val="4"/>
+            <Incremental val="N"/>
+            <ForcedUpdate val="Y"/>
+            <Condition val="Y"/>
+            <Modifier val="B"/>
+            <Direction val="C"/>
+          </Update>
+        </LogicLine>
+      </LogicLines>
+    </LogicUnit>
+  </TaskLogic>
+
+  <TaskForms>
+    <FormEntry _last_test_id="10">
+      <PropertyList model="FORM_GUI0">
+        <Width id="23" val="733"/>
+        <Height id="24" val="259"/>
+        <_Comment id="218"/>
+        <FormName id="311" valUnicode="Import - CapitalCities"/>
+      </PropertyList>
+      <Control _test_id="4">
+        <PropertyList model="CTRL_GUI0_TABLE">
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="8"/>
+          <Y id="22" val="8"/>
+          <Width id="23" val="2067"/>
+          <Height id="24" val="182"/>
+          <TitleHeight id="79" val="11"/>
+          <RowHeight id="80" val="12"/>
+          <Elements id="81" val="2"/>
+          <MultiMarking id="196"/>
+          <_WindowWidth id="241" val="2067"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="9">
+        <PropertyList model="CTRL_GUI0_COLUMN">
+          <Width id="23" val="168"/>
+          <ControlLayer id="25" val="1"/>
+          <Sortable id="134" val="Y"/>
+          <ColumnTitle id="139" valUnicode="City"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="10">
+        <PropertyList model="CTRL_GUI0_COLUMN">
+          <Width id="23" val="274"/>
+          <ControlLayer id="25" val="2"/>
+          <ColumnTitle id="139" valUnicode="Country"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" _test_id="6">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT_TBL" id="1">
+            <Var Column="2"/>
+          </Model>
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="10"/>
+          <Y id="22" val="21"/>
+          <Width id="23" val="163"/>
+          <Height id="24" val="10"/>
+          <ControlLayer id="25" val="1"/>
+          <Data Column="C" id="43"/>
+          <ControlName id="46" val="City"/>
+          <Style id="63" val="1"/>
+          <_Orientation id="143"/>
+          <TabOrder id="314" val="1"/>
+          <Border id="452"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" _test_id="7">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT_TBL" id="1">
+            <Var Column="3"/>
+          </Model>
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="178"/>
+          <Y id="22" val="21"/>
+          <Width id="23" val="269"/>
+          <Height id="24" val="10"/>
+          <ControlLayer id="25" val="2"/>
+          <Data Column="D" id="43"/>
+          <ControlName id="46" val="Country"/>
+          <Style id="63" val="1"/>
+          <_Orientation id="143"/>
+          <TabOrder id="314" val="2"/>
+          <Border id="452"/>
+        </PropertyList>
+      </Control>
+    </FormEntry>
+  </TaskForms>
+
+  <TaskForms>
+    <FormEntry CLSS="1" _last_test_id="2">
+      <PropertyList model="FORM_TEXT">
+        <Width id="23" val="300"/>
+        <Height id="24" val="1"/>
+        <_Comment id="218"/>
+        <FormName id="311" valUnicode="Import - City"/>
+      </PropertyList>
+      <Control _test_id="2">
+        <PropertyList model="CTRL_TEXT_EDIT">
+          <Model ID="MODEL_TEXTBASE" id="1">
+            <Var Column="1"/>
+          </Model>
+          <Width id="23" val="300"/>
+          <Height id="24" val="1"/>
+          <Data Column="B" id="43"/>
+          <HorizontalAlignment id="65" val="1"/>
+          <Format id="82" valUnicode="300"/>
+          <_Orientation id="143"/>
+        </PropertyList>
+      </Control>
+    </FormEntry>
+  </TaskForms>
+
+  <Expressions>
+    <Expression>
+      <ExpSyntax val="EOF(0,1)"/>
+      <ExpAttribute val="B"/>
+    </Expression>
+    <Expression>
+      <ExpSyntax val="Translate('%WorkingDir%')&amp;'Resources\list-national-capitals.csv'"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+    <Expression>
+      <ExpSyntax val="Trim(StrToken(B,3,','))"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+    <Expression>
+      <ExpSyntax val="Trim(StrToken(B,2,','))"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+  </Expressions>
+
+</Task>
+</Programs>
+</ProgramsRepository>
+
+</Application>

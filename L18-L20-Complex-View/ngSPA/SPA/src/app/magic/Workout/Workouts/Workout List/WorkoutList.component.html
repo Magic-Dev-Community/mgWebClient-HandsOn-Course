@@ -1,0 +1,268 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.WorkoutList"
+    >
+        <div style="display: flex; flex-direction: row">
+            <div
+                [magic]="mgc.Table1"
+                class="container_border"
+            >
+                <table>
+                    <th>
+                        <label>
+                            WorkoutType
+                        </label>
+                    </th>
+                    <th>
+                        <label>
+                            WorkoutDate
+                        </label>
+                    </th>
+                    <th>
+                        <label>
+                            WorkoutStartTime
+                        </label>
+                    </th>
+                    <th>
+                        <label>
+                            WorkoutEndTime
+                        </label>
+                    </th>
+                    <th>
+                        <label>
+                            CaloriesBurned
+                        </label>
+                    </th>
+                    <th>
+                        <label>
+                            WorkoutDistance
+                        </label>
+                    </th>
+                    <ng-container *ngFor="let row of task.Records.list">
+                        <tr
+                            *ngIf="mg.ifRowCreated(row) && !mg.isDataviewEmpty()"
+                            id="row"
+                            [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                            class="table_row"
+                            [ngClass]="{ 'selected': mg.isRowSelected(mgc.Table1, row.rowId)}"
+                            [class.selected]="tableService.getSelectedRow() === row.rowId"
+                            (click)="tableService.selectRow(row.rowId)"
+                            [magicRow]="row?.rowId"
+                        >
+                            <td>
+                                <div>
+                                    <div *ngIf="mg.isRowInRowEditing(row)">
+                                        <mat-form-field>
+                                            <mat-select
+                                                [magic]="mgc.Workout_WorkoutType"
+                                                [rowId]="row.rowId"
+                                                [formControlName]="mgc.Workout_WorkoutType"
+                                            >
+                                                <mat-option
+                                                    *ngFor="let o of mg.getItemListValues(mgc.Workout_WorkoutType, row.rowId);"
+                                                    [value]="o.index"
+                                                >
+                                                    {{o.displayValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div *ngIf="!mg.isRowInRowEditing(row)">
+                                        <label
+                                            [magic]="mgc.Workout_WorkoutType"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{ mg.getDisplayValue(mgc.Workout_WorkoutType, row.rowId) }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field
+                                            [magic]="mgc.Workout_WorkoutDate"
+                                            [rowId]="row.rowId"
+                                            [eventsOnly]=true
+                                            *ngIf="mg.isRowInRowEditing(row)"
+                                        >
+                                            <div style="display: flex; flex-direction: row">
+                                                <input
+                                                    matInput
+                                                    [matDatepicker]="Workout_WorkoutDate"
+                                                    [magic]="mgc.Workout_WorkoutDate"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Workout_WorkoutDate"
+                                                    mgFormat
+                                                >
+                                                <mat-datepicker-toggle
+                                                    matSuffix
+                                                    [for]="Workout_WorkoutDate"
+                                                    *ngIf="mg.checkIsReadOnly(mgc.Workout_WorkoutDate) &&  mg.isRowInRowEditing(row)"
+                                                >
+                                                </mat-datepicker-toggle>
+                                                <mat-datepicker #Workout_WorkoutDate></mat-datepicker>
+                                            </div>
+                                        </mat-form-field>
+                                    </div>
+                                    <label
+                                        *ngIf="!mg.isRowInRowEditing(row)"
+                                        [magic]="mgc.Workout_WorkoutDate"
+                                        [rowId]="row.rowId"
+                                    >
+                                        {{mg.getValue(mgc.Workout_WorkoutDate, row.rowId)
+| magicDate : mgc.Workout_WorkoutDate}}
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    type='time'
+                                                    step=1
+                                                    [magic]="mgc.Workout_WorkoutStartTime"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Workout_WorkoutStartTime"
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Workout_WorkoutStartTime
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Workout_WorkoutStartTime"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.Workout_WorkoutStartTime, row.rowId)
+| magicTime : mgc.Workout_WorkoutStartTime}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    type='time'
+                                                    step=1
+                                                    [magic]="mgc.Workout_WorkoutEndTime"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Workout_WorkoutEndTime"
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Workout_WorkoutEndTime
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Workout_WorkoutEndTime"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.Workout_WorkoutEndTime, row.rowId)
+| magicTime : mgc.Workout_WorkoutEndTime}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    type='number'
+                                                    [magic]="mgc.Workout_CaloriesBurned"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Workout_CaloriesBurned"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Workout_CaloriesBurned
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Workout_CaloriesBurned"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getValue(mgc.Workout_CaloriesBurned, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                    [formGroup]="mg.getFormGroupByRow(row.rowId)"
+                                    style="display: flex; flex-direction: row"
+                                >
+                                    <div>
+                                        <mat-form-field *ngIf="mg.isRowInRowEditing(row)">
+                                            <div>
+                                                <input
+                                                    *ngIf="mg.isRowInRowEditing(row)"
+                                                    matInput
+                                                    currencyMask
+                                                    [options]="mg.getNumericPicture(mg.getPicture(mgc.Workout_WorkoutDistance))"
+                                                    [magic]="mgc.Workout_WorkoutDistance"
+                                                    [rowId]="row.rowId"
+                                                    [formControlName]="mgc.Workout_WorkoutDistance"
+                                                    mgFormat
+                                                >
+                                                <mgError
+                                                    [magic]=mgc.Workout_WorkoutDistance
+                                                    [rowId]="row.rowId"
+                                                > </mgError>
+                                            </div>
+                                        </mat-form-field>
+                                        <label
+                                            *ngIf="!mg.isRowInRowEditing(row)"
+                                            [magic]="mgc.Workout_WorkoutDistance"
+                                            [rowId]="row.rowId"
+                                        >
+                                            {{mg.getFormattedValue(mgc.Workout_WorkoutDistance, row.rowId)
+}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-container>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14050.00"/>
+    <APPLICATION val="N"/>
+    <WithIsn val="N"/>
+    <WITH_MODELS val="N"/>
+    <MAIN_PRG_VARS val="1"/>
+    <MAIN_PRG_DSPS val="1"/>
+    <Arguments END="6" START="6"/>
+  </Header>
+
+
+
+<ProgramsRepository>
+<RepositoryProperties>
+</RepositoryProperties>
+<Programs>
+
+<Task MainProgram="N">
+
+  <Header Description="Import - Workout">
+    <ExecutionRight/>
+    <Resident val="N"/>
+    <SQL val="N"/>
+    <ReturnValue>
+      <ReturnValueAttr/>
+      <ParametersAttributes/>
+    </ReturnValue>
+    <SqlWhereExist val="N"/>
+    <TaskType val="B"/>
+    <External val="N"/>
+    <Offline val="N"/>
+    <FormType val="N"/>
+    <DotNetObjectExists val="N"/>
+    <LastModified _date="737417" _time="65514" date="24/12/2019" time="18:11:54"/>
+  </Header>
+
+  <Resource>
+    <DB>
+      <DataObject obj="3"/>
+      <Access val="W"/>
+      <Share val="W"/>
+      <Open val="N"/>
+      <Cache val="Y"/>
+      <IdentifyRowModifications val="84"/>
+    </DB>
+    <IO>
+      <Description val="Import - Workout"/>
+      <IOExpression val="2"/>
+      <OpenPrintDialog val="N"/>
+      <PaperSize val="68"/>
+      <Format val="L"/>
+      <Media val="S"/>
+      <Access val="R"/>
+      <Copies val="1"/>
+      <Orientation val="P"/>
+      <PrintPreview val="N"/>
+      <PDF val="N"/>
+      <PrintingAllowed val="Y"/>
+      <ContentCopyingAllowed val="Y"/>
+      <ChangesAllowed val="Y"/>
+      <PageLayoutAllowed val="Y"/>
+      <Vis2LogTranslation val="N"/>
+      <FlipLines val="N"/>
+    </IO>
+    <Columns/>
+  </Resource>
+
+  <Information>
+    <Key>
+      <Column val="1"/>
+      <Mode val="N"/>
+    </Key>
+    <DB obj="3"/>
+    <Sort>
+      <CLS val="A"/>
+    </Sort>
+    <ForceRecordDelete DEL="N"/>
+    <EndTaskCondition Exp="1"/>
+    <EvaluateEndCondition val="B"/>
+    <InitialMode val="C"/>
+    <Locate Direction="A"/>
+    <Range Direction="A"/>
+    <TaskProperties>
+      <SelectionTable val="N"/>
+      <ConfirmUpdate CNFU="N"/>
+      <ConfirmCancel val="N"/>
+      <ErrorStrategy val="R"/>
+      <LockingStrategy val="I"/>
+      <CacheStrategy val="T"/>
+      <ForceRecordSuffix val="N"/>
+      <TransactionMode val="P"/>
+      <TransactionBegin val="T"/>
+      <PreloadView val="N"/>
+      <AllowEmptyDataview val="Y"/>
+      <KeepCreatedContext val="N"/>
+    </TaskProperties>
+    <SIDE_WIN>
+      <AllowOptions val="N"/>
+      <AllowQuery val="Y"/>
+      <AllowModify val="Y"/>
+      <AllowCreate val="Y"/>
+      <AllowDelete val="Y"/>
+      <AllowLocate val="Y"/>
+      <AllowRange val="Y"/>
+      <AllowIndexChange val="Y"/>
+      <AllowSorting val="Y"/>
+      <AllowIOFiles val="Y"/>
+      <RecordCycle val="Y"/>
+      <AllowEvents val="Y"/>
+      <AllowIndexOptimization val="Y"/>
+      <AllowLocationInQuery val="Y"/>
+      <AllowPrintingData val="N"/>
+    </SIDE_WIN>
+    <WIN>
+      <OpenTaskWindow val="N"/>
+      <CloseTaskWindow val="Y"/>
+      <ForegroundWindow val="Y"/>
+      <FlipFld val="N"/>
+      <RefreshTaskWindow ReturnValue="N"/>
+    </WIN>
+    <BOX>
+      <Direction val="V"/>
+    </BOX>
+  </Information>
+
+  <TaskLogic>
+    <LogicUnit propagate="78">
+      <Level val="R"/>
+      <Type val="M"/>
+      <Scope val="S"/>
+      <EngineDirective val="S"/>
+      <ShowMessage val="Y"/>
+      <Condition val="89"/>
+      <_TotalVariabls val="7"/>
+      <Event>
+        <EventType val="S"/>
+        <PublicObject comp="-1"/>
+      </Event>
+      <LogicLines>
+        <LogicLine>
+          <DATAVIEW_SRC IDX="1" Type="M">
+            <Condition val="N"/>
+            <Modifier val="B"/>
+            <Direction val="C"/>
+          </DATAVIEW_SRC>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="B">
+            <Column val="1"/>
+            <Type val="R"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <_DitIndexForToolkit val="2"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="C">
+            <Column val="2"/>
+            <Type val="R"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <_DitIndexForToolkit val="3"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="D">
+            <Column val="3"/>
+            <Type val="R"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <_DitIndexForToolkit val="4"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="E">
+            <Column val="4"/>
+            <Type val="R"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <_DitIndexForToolkit val="5"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="F">
+            <Column val="5"/>
+            <Type val="R"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <_DitIndexForToolkit val="6"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="G">
+            <Column val="6"/>
+            <Type val="R"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <_DitIndexForToolkit val="7"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="H">
+            <Column val="7"/>
+            <Type val="R"/>
+            <ExposedToRoute val="N"/>
+            <IsParameter val="N"/>
+            <_DitIndexForToolkit val="8"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+      </LogicLines>
+    </LogicUnit>
+    <LogicUnit propagate="78">
+      <Level val="R"/>
+      <Type val="S"/>
+      <Scope val="S"/>
+      <EngineDirective val="S"/>
+      <ShowMessage val="Y"/>
+      <Condition val="89"/>
+      <Event>
+        <EventType val="S"/>
+        <PublicObject comp="-1"/>
+      </Event>
+      <Expanded val="1"/>
+      <LogicLines>
+        <LogicLine>
+          <FormIO>
+            <OperationType val="I"/>
+            <Delimiter val="S"/>
+            <IODeviceInfo>
+              <IoDeviceIndex val="1"/>
+            </IODeviceInfo>
+            <FormEntryInfo>
+              <FormEntryIndex val="2"/>
+            </FormEntryInfo>
+            <DelimiterChar val="44"/>
+            <Condition val="Y"/>
+            <Modifier val="B"/>
+            <Direction val="C"/>
+          </FormIO>
+        </LogicLine>
+      </LogicLines>
+    </LogicUnit>
+  </TaskLogic>
+
+  <TaskForms>
+    <FormEntry _last_test_id="15">
+      <PropertyList model="FORM_GUI0">
+        <Width id="23" val="472"/>
+        <Height id="24" val="195"/>
+        <_Comment id="218"/>
+        <FormName id="311" valUnicode="Import - Workout"/>
+      </PropertyList>
+      <Control _test_id="1">
+        <PropertyList model="CTRL_GUI0_TABLE">
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="8"/>
+          <Y id="22" val="8"/>
+          <Width id="23" val="450"/>
+          <Height id="24" val="182"/>
+          <TitleHeight id="79" val="12"/>
+          <RowHeight id="80" val="13"/>
+          <Elements id="81" val="7"/>
+          <MultiMarking id="196"/>
+          <_WindowWidth id="241" val="450"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="1" _test_id="2">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT_TBL" id="1">
+            <Var Column="1"/>
+          </Model>
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="12"/>
+          <Y id="22" val="23"/>
+          <Width id="23" val="22"/>
+          <Height id="24" val="10"/>
+          <ControlLayer id="25" val="1"/>
+          <Data Column="B" id="43"/>
+          <ControlName id="46" val="AthleteID"/>
+          <Style id="63" val="1"/>
+          <_Orientation id="143"/>
+          <TabOrder id="314" val="1"/>
+          <Border id="452"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" _test_id="3">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT_TBL" id="1">
+            <Var Column="2"/>
+          </Model>
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="50"/>
+          <Y id="22" val="23"/>
+          <Width id="23" val="9"/>
+          <Height id="24" val="10"/>
+          <ControlLayer id="25" val="2"/>
+          <Data Column="C" id="43"/>
+          <ControlName id="46" val="WorkoutType"/>
+          <Style id="63" val="1"/>
+          <_Orientation id="143"/>
+          <TabOrder id="314" val="2"/>
+          <Border id="452"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="4">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT_TBL" id="1">
+            <Var Column="3"/>
+          </Model>
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="105"/>
+          <Y id="22" val="23"/>
+          <Width id="23" val="61"/>
+          <Height id="24" val="10"/>
+          <ControlLayer id="25" val="3"/>
+          <Data Column="D" id="43"/>
+          <ControlName id="46" val="WorkoutDate"/>
+          <Style id="63" val="1"/>
+          <_Orientation id="143"/>
+          <TabOrder id="314" val="3"/>
+          <Border id="452"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="5">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT_TBL" id="1">
+            <Var Column="4"/>
+          </Model>
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="173"/>
+          <Y id="22" val="23"/>
+          <Width id="23" val="46"/>
+          <Height id="24" val="10"/>
+          <ControlLayer id="25" val="4"/>
+          <Data Column="E" id="43"/>
+          <ControlName id="46" val="WorkoutStartTime"/>
+          <Style id="63" val="1"/>
+          <_Orientation id="143"/>
+          <TabOrder id="314" val="4"/>
+          <Border id="452"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="6">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT_TBL" id="1">
+            <Var Column="5"/>
+          </Model>
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="245"/>
+          <Y id="22" val="23"/>
+          <Width id="23" val="46"/>
+          <Height id="24" val="10"/>
+          <ControlLayer id="25" val="5"/>
+          <Data Column="F" id="43"/>
+          <ControlName id="46" val="WorkoutEndTime"/>
+          <Style id="63" val="1"/>
+          <_Orientation id="143"/>
+          <TabOrder id="314" val="5"/>
+          <Border id="452"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="1" _test_id="7">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT_TBL" id="1">
+            <Var Column="6"/>
+          </Model>
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="315"/>
+          <Y id="22" val="23"/>
+          <Width id="23" val="22"/>
+          <Height id="24" val="10"/>
+          <ControlLayer id="25" val="6"/>
+          <Data Column="G" id="43"/>
+          <ControlName id="46" val="CaloriesBurned"/>
+          <Style id="63" val="1"/>
+          <_Orientation id="143"/>
+          <TabOrder id="314" val="6"/>
+          <Border id="452"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="17" _test_id="8">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT_TBL" id="1">
+            <Var Column="7"/>
+          </Model>
+          <Placement bottom="100" id="20" right="100"/>
+          <X id="21" val="375"/>
+          <Y id="22" val="23"/>
+          <Width id="23" val="37"/>
+          <Height id="24" val="10"/>
+          <ControlLayer id="25" val="7"/>
+          <Data Column="H" id="43"/>
+          <ControlName id="46" val="WorkoutDistance"/>
+          <Style id="63" val="1"/>
+          <_Orientation id="143"/>
+          <TabOrder id="314" val="7"/>
+          <Border id="452"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="9">
+        <PropertyList model="CTRL_GUI0_COLUMN">
+          <Width id="23" val="38"/>
+          <ControlLayer id="25" val="1"/>
+          <Sortable id="134" val="Y"/>
+          <ColumnTitle id="139" valUnicode="AthleteID"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="10">
+        <PropertyList model="CTRL_GUI0_COLUMN">
+          <Width id="23" val="55"/>
+          <ControlLayer id="25" val="2"/>
+          <ColumnTitle id="139" valUnicode="WorkoutType"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="11">
+        <PropertyList model="CTRL_GUI0_COLUMN">
+          <Width id="23" val="68"/>
+          <ControlLayer id="25" val="3"/>
+          <ColumnTitle id="139" valUnicode="WorkoutDate"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="12">
+        <PropertyList model="CTRL_GUI0_COLUMN">
+          <Width id="23" val="72"/>
+          <ControlLayer id="25" val="4"/>
+          <ColumnTitle id="139" valUnicode="WorkoutStartTime"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="13">
+        <PropertyList model="CTRL_GUI0_COLUMN">
+          <Width id="23" val="70"/>
+          <ControlLayer id="25" val="5"/>
+          <ColumnTitle id="139" valUnicode="WorkoutEndTime"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="14">
+        <PropertyList model="CTRL_GUI0_COLUMN">
+          <Width id="23" val="60"/>
+          <ControlLayer id="25" val="6"/>
+          <ColumnTitle id="139" valUnicode="CaloriesBurned"/>
+        </PropertyList>
+      </Control>
+      <Control ISN_FATHER="1" PDOD="128" _test_id="15">
+        <PropertyList model="CTRL_GUI0_COLUMN">
+          <Width id="23" val="70"/>
+          <ControlLayer id="25" val="7"/>
+          <ColumnTitle id="139" valUnicode="WorkoutDistance"/>
+        </PropertyList>
+      </Control>
+    </FormEntry>
+  </TaskForms>
+
+  <TaskForms>
+    <FormEntry CLSS="1" _last_test_id="8">
+      <PropertyList model="FORM_TEXT">
+        <Width id="23" val="48"/>
+        <Height id="24" val="1"/>
+        <_Comment id="218"/>
+        <FormName id="311" valUnicode="Import - Workout"/>
+      </PropertyList>
+      <Control PDOD="1" _test_id="2">
+        <PropertyList model="CTRL_TEXT_EDIT">
+          <Model ID="MODEL_TEXTBASE" id="1">
+            <Var Column="1"/>
+          </Model>
+          <Width id="23" val="4"/>
+          <Height id="24" val="1"/>
+          <Data Column="B" id="43"/>
+          <HorizontalAlignment id="65" val="1"/>
+          <_Orientation id="143"/>
+        </PropertyList>
+      </Control>
+      <Control _test_id="3">
+        <PropertyList model="CTRL_TEXT_EDIT">
+          <Model ID="MODEL_TEXTBASE" id="1">
+            <Var Column="2"/>
+          </Model>
+          <X id="21" val="5"/>
+          <Width id="23" val="1"/>
+          <Height id="24" val="1"/>
+          <Data Column="C" id="43"/>
+          <HorizontalAlignment id="65" val="1"/>
+          <_Orientation id="143"/>
+        </PropertyList>
+      </Control>
+      <Control PDOD="128" _test_id="4">
+        <PropertyList model="CTRL_TEXT_EDIT">
+          <Model ID="MODEL_TEXTBASE" id="1">
+            <Var Column="3"/>
+          </Model>
+          <X id="21" val="7"/>
+          <Width id="23" val="10"/>
+          <Height id="24" val="1"/>
+          <Data Column="D" id="43"/>
+          <HorizontalAlignment id="65" val="1"/>
+          <_Orientation id="143"/>
+        </PropertyList>
+      </Control>
+      <Control PDOD="128" _test_id="5">
+        <PropertyList model="CTRL_TEXT_EDIT">
+          <Model ID="MODEL_TEXTBASE" id="1">
+            <Var Column="4"/>
+          </Model>
+          <X id="21" val="18"/>
+          <Width id="23" val="8"/>
+          <Height id="24" val="1"/>
+          <Data Column="E" id="43"/>
+          <HorizontalAlignment id="65" val="1"/>
+          <_Orientation id="143"/>
+        </PropertyList>
+      </Control>
+      <Control PDOD="128" _test_id="6">
+        <PropertyList model="CTRL_TEXT_EDIT">
+          <Model ID="MODEL_TEXTBASE" id="1">
+            <Var Column="5"/>
+          </Model>
+          <X id="21" val="27"/>
+          <Width id="23" val="8"/>
+          <Height id="24" val="1"/>
+          <Data Column="F" id="43"/>
+          <HorizontalAlignment id="65" val="1"/>
+          <_Orientation id="143"/>
+        </PropertyList>
+      </Control>
+      <Control PDOD="1" _test_id="7">
+        <PropertyList model="CTRL_TEXT_EDIT">
+          <Model ID="MODEL_TEXTBASE" id="1">
+            <Var Column="6"/>
+          </Model>
+          <X id="21" val="36"/>
+          <Width id="23" val="4"/>
+          <Height id="24" val="1"/>
+          <Data Column="G" id="43"/>
+          <HorizontalAlignment id="65" val="1"/>
+          <_Orientation id="143"/>
+        </PropertyList>
+      </Control>
+      <Control PDOD="17" _test_id="8">
+        <PropertyList model="CTRL_TEXT_EDIT">
+          <Model ID="MODEL_TEXTBASE" id="1">
+            <Var Column="7"/>
+          </Model>
+          <X id="21" val="41"/>
+          <Width id="23" val="7"/>
+          <Height id="24" val="1"/>
+          <Data Column="H" id="43"/>
+          <HorizontalAlignment id="65" val="1"/>
+          <_Orientation id="143"/>
+        </PropertyList>
+      </Control>
+    </FormEntry>
+  </TaskForms>
+
+  <Expressions>
+    <Expression>
+      <ExpSyntax val="EOF(0,1)"/>
+      <ExpAttribute val="B"/>
+    </Expression>
+    <Expression>
+      <ExpSyntax val="'%WorkingDir%Resources\Workout.csv'"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+  </Expressions>
+
+</Task>
+</Programs>
+</ProgramsRepository>
+
+</Application>
