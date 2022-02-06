@@ -10,7 +10,6 @@ import { TaskBaseMagicComponent, magicProviders } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-Workouts',
     providers: [...magicProviders],
-    styleUrls: ['./Workouts.component.css'],
     templateUrl: './Workouts.component.html'
 })
 export class Workouts extends TaskBaseMagicComponent {

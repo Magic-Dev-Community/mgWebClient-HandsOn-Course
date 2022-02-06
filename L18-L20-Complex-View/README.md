@@ -28,4 +28,10 @@ Instead, cherry pick the changes and differences, it actually adds to the learni
 
 That aside, code, the lesson, the approach works.
 
-TODO: Complete lessons 19-20.
+Lesson 19:
+
+Turn off Confirm Update in the CreateWorkout program.
+
+I didn't waste time on CreateWorkout.component.html and will revist making things pretty on a second pass.
+
+TODO: Complete Lesson 20.

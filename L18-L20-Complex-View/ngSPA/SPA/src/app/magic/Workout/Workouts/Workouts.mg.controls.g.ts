@@ -10,6 +10,7 @@ export enum MgControlName {
         Label2 = "Label2",
         V_vSearch = "V_vSearch",
         Search = "Search",
+        New = "New",
         Table3 = "Table3",
         Column4 = "Column4",
         Athlete_ID = "Athlete_ID",
@@ -17,7 +18,7 @@ export enum MgControlName {
         Athlete_Name = "Athlete_Name",
         Column8 = "Column8",
         Athlete_City = "Athlete_City",
-        Subform10 = "Subform10",
+        SubformWL = "SubformWL",
 }
 export enum MgCustomProperties {}
 export class MgFormControlsAccessor {

@@ -33,6 +33,13 @@
             >
                 Search
             </button>
+            <button
+                mat-raised-button
+                color="primary"
+                [magic]="mgc.New"
+            >
+                New
+            </button>
         </div>
         <div style="display: flex; flex-direction: row">
             <div
@@ -176,7 +183,7 @@
                 </table>
             </div>
             <mat-card>
-                <magic-subform [magic]="mgc.Subform10">
+                <magic-subform [magic]="mgc.SubformWL">
                 </magic-subform>
             </mat-card>
         </div>

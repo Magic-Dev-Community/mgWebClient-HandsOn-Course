@@ -16,7 +16,9 @@ export const magicGenComponents = [ Logout_Logout ,  Welcome_Welcome ,  Login_Lo
 ];
 
 
-export const LazyLoadModulesMap = { Workouts_Workout_List_WorkoutList : { moduleName : 'MagicWorkoutModule',
+export const LazyLoadModulesMap = { CreateWorkout_CreateWorkout : { moduleName : 'MagicWorkoutModule',
+                                          modulePath : 'src/app/magic/Workout/magic.gen.lib.module'},
+  Workouts_Workout_List_WorkoutList : { moduleName : 'MagicWorkoutModule',
                                           modulePath : 'src/app/magic/Workout/magic.gen.lib.module'},
   Workouts_Workouts : { moduleName : 'MagicWorkoutModule',
                                           modulePath : 'src/app/magic/Workout/magic.gen.lib.module'},

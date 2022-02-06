@@ -21,7 +21,7 @@
 			"props":	{
 				"id":	"Label2",
 				"text":	"vSearch",
-				"common_line_id":	"line11"
+				"common_line_id":	"line10"
 			},
 			"coordinates":	{
 				"x":	13,
@@ -39,7 +39,7 @@
 				"id":	"V_vSearch",
 				"mgformat":	"mgFormat",
 				"attribute":	"A",
-				"common_line_id":	"line11"
+				"common_line_id":	"line10"
 			},
 			"coordinates":	{
 				"x":	60,
@@ -56,11 +56,28 @@
 			"props":	{
 				"id":	"Search",
 				"format":	"Search",
-				"common_line_id":	"line11"
+				"common_line_id":	"line10"
 			},
 			"coordinates":	{
 				"x":	212,
 				"y":	11,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"New",
+				"format":	"New",
+				"common_line_id":	"line10"
+			},
+			"coordinates":	{
+				"x":	260,
+				"y":	10,
 				"width":	41,
 				"height":	22
 			},
@@ -198,7 +215,7 @@
 		{
 			"style":	null,
 			"props":	{
-				"id":	"Subform10",
+				"id":	"SubformWL",
 				"common_line_id":	"line52"
 			},
 			"coordinates":	{

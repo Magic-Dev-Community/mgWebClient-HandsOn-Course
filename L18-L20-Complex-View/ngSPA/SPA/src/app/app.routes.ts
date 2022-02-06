@@ -54,6 +54,11 @@ export const routes: Routes = [
         loadChildren: () => import(`./magic/Workout/magic.gen.lib.module`).then(m => m.MagicWorkoutModule),
 
     },
+    {
+        path: 'CreateWorkout',
+        loadChildren: () => import(`./magic/Workout/magic.gen.lib.module`).then(m => m.MagicWorkoutModule),
+
+    },
 
 ];
 

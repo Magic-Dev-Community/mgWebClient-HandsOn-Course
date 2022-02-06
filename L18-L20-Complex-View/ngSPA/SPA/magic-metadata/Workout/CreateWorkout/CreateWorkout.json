@@ -1,0 +1,264 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"CreateWorkout",
+		"window_type":	12,
+		"component_path":	"CreateWorkout/",
+		"component_uniquename":	"CreateWorkout_CreateWorkout"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	0,
+		"height":	0
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label9",
+				"text":	"vWorkoutType:",
+				"common_line_id":	"line46"
+			},
+			"coordinates":	{
+				"x":	6,
+				"y":	46,
+				"width":	76,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vWorkoutType",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line46"
+			},
+			"coordinates":	{
+				"x":	109,
+				"y":	46,
+				"width":	13,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label10",
+				"text":	"vWorkoutDate:",
+				"common_line_id":	"line79"
+			},
+			"coordinates":	{
+				"x":	6,
+				"y":	79,
+				"width":	75,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vWorkoutDate",
+				"mgformat":	"mgFormat",
+				"attribute":	"D",
+				"common_line_id":	"line79"
+			},
+			"coordinates":	{
+				"x":	109,
+				"y":	79,
+				"width":	78,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label11",
+				"text":	"vWorkoutStartTime:",
+				"common_line_id":	"line112"
+			},
+			"coordinates":	{
+				"x":	6,
+				"y":	112,
+				"width":	97,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vWorkoutStartTime",
+				"showsecs":	true,
+				"attribute":	"T",
+				"common_line_id":	"line112"
+			},
+			"coordinates":	{
+				"x":	109,
+				"y":	112,
+				"width":	60,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label12",
+				"text":	"vWorkoutEndTime:",
+				"common_line_id":	"line145"
+			},
+			"coordinates":	{
+				"x":	6,
+				"y":	145,
+				"width":	94,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vWorkoutEndTime",
+				"showsecs":	true,
+				"attribute":	"T",
+				"common_line_id":	"line145"
+			},
+			"coordinates":	{
+				"x":	109,
+				"y":	145,
+				"width":	60,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label13",
+				"text":	"vCaloriesBurned:",
+				"common_line_id":	"line178"
+			},
+			"coordinates":	{
+				"x":	6,
+				"y":	178,
+				"width":	82,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vCaloriesBurned",
+				"mgformat":	"mgFormat",
+				"attribute":	"N",
+				"common_line_id":	"line178"
+			},
+			"coordinates":	{
+				"x":	109,
+				"y":	178,
+				"width":	30,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label14",
+				"text":	"vWorkoutDistance:",
+				"common_line_id":	"line211"
+			},
+			"coordinates":	{
+				"x":	6,
+				"y":	211,
+				"width":	94,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vWorkoutDistance",
+				"mgformat":	"mgFormat",
+				"currency":	"currency",
+				"attribute":	"N",
+				"common_line_id":	"line211"
+			},
+			"coordinates":	{
+				"x":	109,
+				"y":	211,
+				"width":	48,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Save",
+				"format":	"Save",
+				"common_line_id":	"line260"
+			},
+			"coordinates":	{
+				"x":	230,
+				"y":	260,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Cancel",
+				"format":	"Cancel",
+				"common_line_id":	"line260"
+			},
+			"coordinates":	{
+				"x":	278,
+				"y":	260,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		}
+	]
+}

@@ -1,5 +1,5 @@
 {
-	"create_route_map":	false,
+	"create_route_map":	true,
 	"create_new_project":	false,
 	"created_menu":	false,
 	"created_views":	false,
@@ -11,14 +11,6 @@
 	"exposed_functionality":	true,
 	"allow_testing":	false,
 	"project_name":	"SPA",
-	"web_modules":	[
-		{
-			"module_name":	"Workout",
-			"load_on_demand":	true,
-			"form_files":	[
-				"Workouts/Workouts"
-			]
-		}
-	],
+	"web_modules":	null,
 	"controls_accessor_only":	false
 }
