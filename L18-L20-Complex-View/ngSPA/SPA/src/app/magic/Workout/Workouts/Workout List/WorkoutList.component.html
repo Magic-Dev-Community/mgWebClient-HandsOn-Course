@@ -9,39 +9,32 @@
         <div style="display: flex; flex-direction: row">
             <div
                 [magic]="mgc.Table1"
-                class="container_border"
+                class="table_scrollBar container_border"
+                infinite-scroll
+                [infiniteScrollDistance]="2"
+                [infiniteScrollThrottle]="500"
+                (scrolled)="tableService.onScrollDown()"
+                [scrollWindow]="false"
             >
-                <table>
-                    <th>
-                        <label>
-                            WorkoutType
-                        </label>
-                    </th>
-                    <th>
-                        <label>
-                            WorkoutDate
-                        </label>
-                    </th>
-                    <th>
-                        <label>
-                            WorkoutStartTime
-                        </label>
-                    </th>
-                    <th>
-                        <label>
-                            WorkoutEndTime
-                        </label>
-                    </th>
-                    <th>
-                        <label>
-                            CaloriesBurned
-                        </label>
-                    </th>
-                    <th>
-                        <label>
-                            WorkoutDistance
-                        </label>
-                    </th>
+            <table class="table text-center table-responsive p-1">
+              <th style="width:20%">
+                <label> Activity</label>
+              </th>
+              <th style="width:20%">
+                <label> Date</label>
+              </th>
+              <th style="width:20%">
+                <label> Start Time</label>
+              </th>
+              <th style="width:20%">
+                <label> End Time</label>
+              </th>
+              <th style="width:10%">
+                <label> Calories</label>
+              </th>
+              <th style="width:10%">
+                <label> Distance</label>
+              </th>
                     <ng-container *ngFor="let row of task.Records.list">
                         <tr
                             *ngIf="mg.ifRowCreated(row) && !mg.isDataviewEmpty()"
@@ -75,6 +68,7 @@
                                         <label
                                             [magic]="mgc.Workout_WorkoutType"
                                             [rowId]="row.rowId"
+                                            class = "{{ mg.getDisplayValue(mgc.Workout_WorkoutType, row.rowId)}}"
                                         >
                                             {{ mg.getDisplayValue(mgc.Workout_WorkoutType, row.rowId) }}
                                         </label>
@@ -217,6 +211,10 @@
                                             *ngIf="!mg.isRowInRowEditing(row)"
                                             [magic]="mgc.Workout_CaloriesBurned"
                                             [rowId]="row.rowId"
+                                            [ngClass]= "{ 'calLow': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) <= '300',
+                                                          'calMed': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) > '300' && mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) <= '500',
+                                                          'calHigh': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) > '500'
+                                                        }"
                                         >
                                             {{mg.getValue(mgc.Workout_CaloriesBurned, row.rowId)
 }}
@@ -252,9 +250,11 @@
                                             *ngIf="!mg.isRowInRowEditing(row)"
                                             [magic]="mgc.Workout_WorkoutDistance"
                                             [rowId]="row.rowId"
+                                            [class.high]="mg.getValue(mgc.Workout_WorkoutDistance, row.rowId) > '10'"
+                                            [class.low]="mg.getValue(mgc.Workout_WorkoutDistance, row.rowId) <= '3'"
+                                            [class.average]="mg.getValue(mgc.Workout_WorkoutDistance, row.rowId) >= '4' && mg.getValue(mgc.Workout_WorkoutDistance, row.rowId) <= '10'"
                                         >
-                                            {{mg.getFormattedValue(mgc.Workout_WorkoutDistance, row.rowId)
-}}
+                                            {{mg.getFormattedValue(mgc.Workout_WorkoutDistance, row.rowId)}}
                                         </label>
                                     </div>
                                 </div>

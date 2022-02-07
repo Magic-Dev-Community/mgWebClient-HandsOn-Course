@@ -34,4 +34,21 @@ Turn off Confirm Update in the CreateWorkout program.
 
 I didn't waste time on CreateWorkout.component.html and will revist making things pretty on a second pass.
 
-TODO: Complete Lesson 20.
+Lesson 20:
+
+Using class name and conditions section, don't vars in quotes:
+
+```
+[class.high]="mg.getValue(mgc.Workout_WorkoutDistance, row.rowId) > '10'"
+[class.low]="mg.getValue(mgc.Workout_WorkoutDistance, row.rowId) <= '3'"
+[class.average]="mg.getValue(mgc.Workout_WorkoutDistance, row.rowId) >= '4' && mg.getValue(mgc.Workout_WorkoutDistance, row.rowId) <= '10'"
+```
+
+Same for Using ngClass:
+
+```
+[ngClass]= "{ 'calLow': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) <= '300',
+                'calMed': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) > '300' && mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) <= '500',
+                'calHigh': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) > '500'
+            }"
+```
