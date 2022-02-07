@@ -48,7 +48,7 @@ Same for Using ngClass:
 
 ```
 [ngClass]= "{ 'calLow': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) <= '300',
-                'calMed': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) > '300' && mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) <= '500',
-                'calHigh': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) > '500'
+              'calMed': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) > '300' && mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) <= '500',
+              'calHigh': mg.getValue(mgc.Workout_CaloriesBurned, row.rowId) > '500'
             }"
 ```
