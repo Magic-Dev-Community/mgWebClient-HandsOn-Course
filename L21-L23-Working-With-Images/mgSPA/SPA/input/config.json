@@ -1,0 +1,24 @@
+{
+	"create_route_map":	false,
+	"create_new_project":	false,
+	"created_menu":	false,
+	"created_views":	false,
+	"theme":	"material",
+	"output_folder":	"C:\\projects\\ngSPA",
+	"backup_current":	false,
+	"source_images_folder":	"C:\\projects\\mgSPA\\SPA\\images",
+	"copy_images":	false,
+	"exposed_functionality":	true,
+	"allow_testing":	false,
+	"project_name":	"SPA",
+	"web_modules":	[
+		{
+			"module_name":	"Workout",
+			"load_on_demand":	true,
+			"form_files":	[
+				"ShowImagesTable/CreateNewImageRecord/CreateNewImageRecord"
+			]
+		}
+	],
+	"controls_accessor_only":	false
+}

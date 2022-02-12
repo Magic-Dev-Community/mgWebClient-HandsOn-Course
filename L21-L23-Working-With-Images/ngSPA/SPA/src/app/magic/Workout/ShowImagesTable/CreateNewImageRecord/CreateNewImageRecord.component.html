@@ -1,0 +1,81 @@
+<form
+name="screenFormGroup"
+novalidate
+[formGroup]="screenFormGroup"
+
+>
+<Div class="form-style">
+  <h1>Upload Image</h1>
+  <ul>
+
+    <!--date-->
+    <li>
+      <input
+        type="date"
+        name="aa"
+        magic="vImageDate"
+        formControlName="vImageDate"
+        dateInput
+        mgFormat
+        class="field-style field-split align-left"
+        placeholder="Image Date"
+        required
+      />
+    </li>
+    <!--time-->
+    <li>
+      <input
+        type="time"
+        name="ab"
+        magic="vImageTime"
+        formControlName="vImageTime"
+        timeInput
+        mgFormat
+        class="field-style field-split align-left"
+        placeholder="Image Time"
+        required
+      />
+    </li>
+
+    <li>
+      <textarea
+        name="Description"
+        magic="vDescription"
+        formControlName="vDescription"
+        mgFormat
+        class="field-style"
+        placeholder="Image Description"
+        required
+      ></textarea>
+    </li>
+
+    <li>
+    <div>
+      <button class="btn btn-success mr-2 ml-2 editBt" magic="NewImage">
+        <label>
+          Select Image
+          <input
+            type="file"
+            style="display: none"
+            (change)="fileUpload($event)"
+          />
+        </label>
+      </button>
+      <button class="btn btn-success mr-2 ml-2 editBt" magic="mgGetFile">
+        Upload Image
+      </button>
+    </div>
+    </li>
+    <li>
+    <div>
+      <button class="btn btn-success mr-2 ml-2 editBt" magic="SaveNewImage">
+        Save Record
+      </button>
+      <button class="btn btn-success mr-2 ml-2 editBt" magic="Cancel">
+        Cancel
+      </button>
+    </div>
+  </li>
+  </ul>
+</Div>
+</form>

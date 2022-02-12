@@ -12,3 +12,4 @@ We'll follow the syllabus of MSE's online lessons found here: <a href="https://w
 [Lesson 13-15 - Editing](/L13-L15-Editing/)<br/>
 [Lesson 16-17 - Popup](/L16-L17-Popup/)<br/>
 [Lesson 18-20 - Complex View](/L18-L20-Complex-View/)<br/>
+[Lesson 21-23 - Working With Images](/L21-L23-Working-With-Images/)<br/>

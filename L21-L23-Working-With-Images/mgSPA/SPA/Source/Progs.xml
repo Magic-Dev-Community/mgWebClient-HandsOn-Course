@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14080.00"/>
+    <WithIsn val="Y"/>
+    <Exe comp="-1"/>
+    <LastIsn val="28"/>
+    <LastIsnFolder val="8"/>
+    <Folders>
+      <Folder id="8">
+        <Name val="Workout"/>
+        <WebModule val="Y"/>
+        <LoadOnDemand val="Y"/>
+      </Folder>
+      <Folder id="4">
+        <Name val="Athlete"/>
+        <WebModule val="Y"/>
+        <LoadOnDemand val="Y"/>
+      </Folder>
+      <Folder id="1">
+        <Name val="Main"/>
+      </Folder>
+      <Folder id="2">
+        <Name val="Admin"/>
+        <WebModule val="Y"/>
+      </Folder>
+      <Folder id="3">
+        <Name val="Batch"/>
+      </Folder>
+      <Folder id="5">
+        <Name val="Utils"/>
+      </Folder>
+    </Folders>
+  </Header>
+
+  <ProgramsRepositoryOutLine>
+    <Programs>
+      <Program id="1"/>
+      <Program FolderIsn="8" id="25"/>
+      <Program FolderIsn="8" id="26"/>
+      <Program FolderIsn="8" id="28"/>
+      <Program FolderIsn="4" id="15"/>
+      <Program FolderIsn="4" id="20"/>
+      <Program FolderIsn="4" id="21"/>
+      <Program FolderIsn="1" id="2"/>
+      <Program FolderIsn="1" id="3"/>
+      <Program FolderIsn="1" id="5"/>
+      <Program FolderIsn="1" id="6"/>
+      <Program FolderIsn="2" id="12"/>
+      <Program FolderIsn="2" id="13"/>
+      <Program FolderIsn="2" id="14"/>
+      <Program FolderIsn="2" id="22"/>
+      <Program FolderIsn="3" id="7"/>
+      <Program FolderIsn="3" id="19"/>
+      <Program FolderIsn="3" id="23"/>
+      <Program FolderIsn="5" id="18"/>
+      <Program FolderIsn="5" id="11"/>
+      <Program FolderIsn="5" id="24"/>
+      <Program FolderIsn="5" id="27"/>
+    </Programs>
+  </ProgramsRepositoryOutLine>
+
+</Application>

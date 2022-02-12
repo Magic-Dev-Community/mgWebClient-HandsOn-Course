@@ -1,0 +1,11 @@
+{
+   "protocol": "http",
+   "server": "WinDev",
+   "requester": "M48Scripts/MGrqispi.dll",
+   "appname": "SPA",
+   "LogClientSequenceForActivityMonitor": "N",
+   "InternalLogLevel": "",
+   "InternalLogSync": "Message",
+   "DisplayGenericError": "N",
+   "FirstHTTPRequestTimeout": "5"
+}

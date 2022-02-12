@@ -1,0 +1,316 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"CreateAthlete",
+		"component_path":	"CreateAthlete/",
+		"component_uniquename":	"CreateAthlete_CreateAthlete"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	650,
+		"height":	439
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label1",
+				"text":	"vName:",
+				"common_line_id":	"line42"
+			},
+			"coordinates":	{
+				"x":	5,
+				"y":	42,
+				"width":	39,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"vName",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line42"
+			},
+			"coordinates":	{
+				"x":	76,
+				"y":	42,
+				"width":	214,
+				"height":	16
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label3",
+				"text":	"vCity:",
+				"common_line_id":	"line72"
+			},
+			"coordinates":	{
+				"x":	5,
+				"y":	72,
+				"width":	28,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"vCity",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line72"
+			},
+			"coordinates":	{
+				"x":	76,
+				"y":	72,
+				"width":	214,
+				"height":	16
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label5",
+				"text":	"vPhone:",
+				"common_line_id":	"line101"
+			},
+			"coordinates":	{
+				"x":	5,
+				"y":	101,
+				"width":	43,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"vPhone",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line101"
+			},
+			"coordinates":	{
+				"x":	76,
+				"y":	101,
+				"width":	109,
+				"height":	16
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label7",
+				"text":	"vEmail:",
+				"common_line_id":	"line130"
+			},
+			"coordinates":	{
+				"x":	5,
+				"y":	130,
+				"width":	36,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"vEmail",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line130"
+			},
+			"coordinates":	{
+				"x":	76,
+				"y":	130,
+				"width":	354,
+				"height":	16
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label9",
+				"text":	"vDateOfBirth:",
+				"common_line_id":	"line159"
+			},
+			"coordinates":	{
+				"x":	5,
+				"y":	159,
+				"width":	66,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"vDateOfBirth",
+				"mgformat":	"mgFormat",
+				"attribute":	"D",
+				"common_line_id":	"line159"
+			},
+			"coordinates":	{
+				"x":	76,
+				"y":	159,
+				"width":	76,
+				"height":	16
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label11",
+				"text":	"vHeight:",
+				"common_line_id":	"line189"
+			},
+			"coordinates":	{
+				"x":	5,
+				"y":	189,
+				"width":	43,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"vHeight",
+				"mgformat":	"mgFormat",
+				"attribute":	"N",
+				"common_line_id":	"line189"
+			},
+			"coordinates":	{
+				"x":	76,
+				"y":	189,
+				"width":	23,
+				"height":	16
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label13",
+				"text":	"vWeight:",
+				"common_line_id":	"line218"
+			},
+			"coordinates":	{
+				"x":	5,
+				"y":	218,
+				"width":	45,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"vWeight",
+				"mgformat":	"mgFormat",
+				"currency":	"currency",
+				"attribute":	"N",
+				"common_line_id":	"line218"
+			},
+			"coordinates":	{
+				"x":	76,
+				"y":	218,
+				"width":	40,
+				"height":	16
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Label15",
+				"text":	"vComment:",
+				"common_line_id":	"line247"
+			},
+			"coordinates":	{
+				"x":	5,
+				"y":	247,
+				"width":	55,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"vComment",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line247"
+			},
+			"coordinates":	{
+				"x":	76,
+				"y":	247,
+				"width":	1754,
+				"height":	16
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Create",
+				"format":	"Create",
+				"common_line_id":	"line299"
+			},
+			"coordinates":	{
+				"x":	319,
+				"y":	299,
+				"width":	111,
+				"height":	28
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		}
+	]
+}

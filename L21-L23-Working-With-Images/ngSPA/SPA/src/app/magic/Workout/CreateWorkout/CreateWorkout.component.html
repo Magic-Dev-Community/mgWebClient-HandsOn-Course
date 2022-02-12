@@ -1,0 +1,165 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.CreateWorkout"
+    >
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label9"
+                class="lable_overflow"
+            >
+                vWorkoutType:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.V_vWorkoutType"
+                            [formControlName]="mgc.V_vWorkoutType"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_vWorkoutType> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label10"
+                class="lable_overflow"
+            >
+                vWorkoutDate:
+            </label>
+            <div>
+                <mat-form-field
+                    [magic]="mgc.V_vWorkoutDate"
+                    [eventsOnly]=true
+                >
+                    <input
+                        matInput
+                        [matDatepicker]="V_vWorkoutDate"
+                        [magic]="mgc.V_vWorkoutDate"
+                        [formControlName]="mgc.V_vWorkoutDate"
+                        mgFormat
+                    >
+                    <mat-datepicker-toggle
+                        matSuffix
+                        [for]="V_vWorkoutDate"
+                        *ngIf="mg.checkIsReadOnly(mgc.V_vWorkoutDate)"
+                    >
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #V_vWorkoutDate></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label11"
+                class="lable_overflow"
+            >
+                vWorkoutStartTime:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='time'
+                            step=1
+                            [magic]="mgc.V_vWorkoutStartTime"
+                            [formControlName]="mgc.V_vWorkoutStartTime"
+                        >
+                        <mgError [magic]=mgc.V_vWorkoutStartTime> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label12"
+                class="lable_overflow"
+            >
+                vWorkoutEndTime:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='time'
+                            step=1
+                            [magic]="mgc.V_vWorkoutEndTime"
+                            [formControlName]="mgc.V_vWorkoutEndTime"
+                        >
+                        <mgError [magic]=mgc.V_vWorkoutEndTime> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label13"
+                class="lable_overflow"
+            >
+                vCaloriesBurned:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='number'
+                            [magic]="mgc.V_vCaloriesBurned"
+                            [formControlName]="mgc.V_vCaloriesBurned"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_vCaloriesBurned> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label14"
+                class="lable_overflow"
+            >
+                vWorkoutDistance:
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            currencyMask
+                            [options]="mg.getNumericPicture(mg.getPicture(mgc.V_vWorkoutDistance))"
+                            [magic]="mgc.V_vWorkoutDistance"
+                            [formControlName]="mgc.V_vWorkoutDistance"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_vWorkoutDistance> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <button
+                mat-raised-button
+                color="primary"
+                [magic]="mgc.Save"
+            >
+                Save
+            </button>
+            <button
+                mat-raised-button
+                color="primary"
+                [magic]="mgc.Cancel"
+            >
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>
